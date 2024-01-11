@@ -15,7 +15,7 @@ class StructureHarmonizer:
         self.threshold = threshold
         self.roi_dict = {}
         self.closest_matches = {}
-        self.stored_dictionary = pd.DataFrame() # Initialize an empty DataFrame to store the results
+        self.stored_dictionary:pd.DataFrame = pd.DataFrame() # Initialize an empty DataFrame to store the results
         self.TG_263_file_path = TG_263_file_path
         self.TG_263_column_names = [ 'TG263-Primary Name', 'TG-263-Reverse Order Name']
         self.TG_263_ID_column = 'TG263-Primary Name'
@@ -41,8 +41,15 @@ class StructureHarmonizer:
     def harmonize_structures(self):
         self.get_all_roi()
         TG_263_file = pd.read_excel(self.TG_263_file_path)
-        df = pd.DataFrame(index=TG_263_file.index, columns=TG_263_file.columns)
+        self.get_all_TG263names(TG_263_file, self.TG_263_column_names)
         self.get_closest_matches(TG_263_file, self.TG_263_column_names)
+
+    def file_generator(self, directory, pattern):
+        # Generator function to yield files one by one
+        for root, _, files in os.walk(directory):
+            for file in files:
+                if fnmatch.fnmatch(file, pattern):
+                    yield root, _, [file]
 
     def load_stored_dictionary(self):
         self.stored_dictionary = pd.read_csv(self.output_file, index_col=0)
@@ -51,38 +58,51 @@ class StructureHarmonizer:
         # Identify standard names
         self.standard_names = [col for col in self.stored_dictionary.columns if not col.startswith('USER_')]
 
+    def get_all_TG263names(self, TG_263_file):
+        # Iterate over the TG_263_file DataFrame
+        for index in TG_263_file.index:
+            for column in self.TG_263_column_names:
+                TG263name = TG_263_file.loc[index, column]  # get the name from the TG263 file
+                if pd.isnull(TG263name):  # skip if the name is NaN
+                    continue
+                # Add the name to the stored_dictionary if not already present
+                if TG263name not in self.stored_dictionary.columns:
+                    self.stored_dictionary.loc[:, TG263name] = 0
+
     def get_all_roi(self):
         # this function will search the directory for RTSTRUCT files and create a new dictionary of ROI names and file names, this can later be compared to the stored_dictionary
         if not os.path.exists(self.directory):
             print('Directory does not exist')
         else:
             # perform the recursive search
-            for root, _, files in os.walk(self.directory):
+            for root, _, files in self.file_generator(self.directory, self.pattern):
                 for file in files:
-                    if fnmatch.fnmatch(file, self.pattern):
-                        # read the file
-                        ds = dcmread(os.path.join(root, file))
-                        for roi in ds.StructureSetROISequence:
-                            # get the ROIName
-                            roi_name = roi.ROIName
-                            # check if the ROIName is already in the dictionary
-                            if roi_name in self.roi_dict:
-                                # if it is, append the file name to the value list
-                                self.roi_dict[roi_name].append(file)
-                            else:
-                                # if not, add the ROIName to the dictionary with the file name as the value
-                                self.roi_dict[roi_name] = [file]
+                    # read the file
+                    ds = dcmread(os.path.join(root, file))
+                    for roi in ds.StructureSetROISequence:
+                        # get the ROIName as a string
+                        roi_name = str(roi.ROIName)
+                        # check if the ROIName is already in the dictionary
+                        if roi_name in self.roi_dict:
+                            # if it is, append the file name to the value list
+                            self.roi_dict[roi_name].append(file)
+                        else:
+                            # if not, add the ROIName to the dictionary with the file name as the value
+                            self.roi_dict[roi_name] = [file]
+                        if roi_name not in self.stored_dictionary.index:
+                            self.stored_dictionary.loc[roi_name, :] = 0
 
-    def get_closest_matches(self, TG_263_file, columns_with_names):
+    def get_closest_matches(self, TG_263_file):
         # Initialize an empty dictionary to keep track of the closest matches
         self.closest_matches = {}
 
         # Fill the DataFrame
         for index in TG_263_file.index:
-            for column in columns_with_names:
+            for column in self.TG_263_column_names:
                 TG263name = TG_263_file.loc[index, column]  # get the name to match from the TG263 file
                 if pd.isnull(TG263name):  # skip if the name is NaN
                     continue
+
                 TG263_id = TG_263_file.loc[index, self.TG_263_ID_column]  # Get the TG263 ID
                 TG263name_lower = TG263name.lower().strip()  # Convert to lowercase and strip spaces
                 TG263name_words = set(TG263name_lower.split()) # Split the name into set of words
@@ -101,13 +121,15 @@ class StructureHarmonizer:
                     if score >= self.threshold:
                         # Add the TG263 ID as a column name to the DataFrame and identify it as a match to the corresponding roi
                         self.stored_dictionary.loc[roi, TG263_id] = 1
+                        # Once a match is found, stop checking other ROIs for this TG263name
+                        break
                     else:
                         # Store all matches in a list sorted by score, to be used for review_matches()
                         if roi not in self.closest_matches: # If the list doesn't exist yet, create it
                             self.closest_matches[roi] = [(TG263name, score)]
                         else:
                             self.closest_matches[roi].append((TG263name, score)) # Append the match to the list
-                            self.closest_matches[roi].sort(key=lambda x: x[0], reverse=True) # Sort by score
+                            self.closest_matches[roi].sort(key=lambda x: x[1], reverse=True) # Sort by score
 
     def review_matches(self):
         # Initialize a dictionary to store user responses
@@ -117,6 +139,9 @@ class StructureHarmonizer:
 
         # Review the closest matches
         for roi in self.closest_matches.keys():
+            # If a match has already been recorded for this ROI, skip it
+            if self.stored_dictionary.loc[roi].any() == 1:
+                continue
             for column in self.stored_dictionary.columns:
                 while self.closest_matches[roi]:
                     name, score = self.closest_matches[roi][0]
@@ -136,6 +161,7 @@ class StructureHarmonizer:
                         break
                     elif user_input.lower() in ['no', 'n']:
                         print("Match is incorrect. Trying next closest match...")
+                        self.stored_dictionary.loc[roi, column] = 0
                         self.closest_matches[roi].pop(0)
                     elif user_input.lower() in ['skip', 's']:
                         print("Skipping review of this item.")
@@ -153,8 +179,6 @@ class StructureHarmonizer:
                         break
                 if user_input.lower() == 'end':
                     break
-            if user_input.lower() == 'end':
-                break
 
     def write_to_csv(self):
         # Save the DataFrame as a CSV file
