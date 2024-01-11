@@ -6,6 +6,7 @@ import numpy as np
 import pandas as pd
 from openpyxl import load_workbook
 from fuzzywuzzy import fuzz
+import re
 
 class StructureHarmonizer:
     def __init__(self, directory, output_file, pattern, TG_263_file_path, threshold=80):
@@ -15,20 +16,18 @@ class StructureHarmonizer:
         self.threshold = threshold
         self.roi_dict = {}
         self.closest_matches = {}
-        self.stored_dictionary:pd.DataFrame = pd.DataFrame() # Initialize an empty DataFrame to store the results
-        self.TG_263_file_path = TG_263_file_path
-        self.TG_263_column_names = [ 'TG263-Primary Name', 'TG-263-Reverse Order Name']
-        self.TG_263_ID_column = 'TG263-Primary Name'
-
-    def run(self):
-        # A default program flow to be used if the user doesn't want to customize the process
-        # harmonizes structures, querys whether user wants to review matches, and then writes results to csv
-
-        # if output_file already exists, load it as a stored_dictionary
+        #if output_file already exists, load it as a stored_dictionary
         if os.path.exists(self.output_file):
             self.load_stored_dictionary()
         else:
             self.stored_dictionary = pd.DataFrame()
+        self.TG_263_file_path = TG_263_file_path
+        self.TG_263_column_names = [ 'TG263-Primary Name', 'TG-263-Reverse Order Name']
+        self.TG_263_ID_column = 'TG263-Primary Name'
+
+    def run_dictionary(self):
+        # A default program flow to be used if the user doesn't want to customize the process
+        # harmonizes structures, querys whether user wants to review matches, and then writes results to csv
 
         self.harmonize_structures()
         # Ask the user if they want to skip the review process
@@ -41,8 +40,8 @@ class StructureHarmonizer:
     def harmonize_structures(self):
         self.get_all_roi()
         TG_263_file = pd.read_excel(self.TG_263_file_path)
-        self.get_all_TG263names(TG_263_file, self.TG_263_column_names)
-        self.get_closest_matches(TG_263_file, self.TG_263_column_names)
+        self.get_all_TG263names(TG_263_file)
+        self.get_closest_matches(TG_263_file)
 
     def file_generator(self, directory, pattern):
         # Generator function to yield files one by one
@@ -59,15 +58,20 @@ class StructureHarmonizer:
         self.standard_names = [col for col in self.stored_dictionary.columns if not col.startswith('USER_')]
 
     def get_all_TG263names(self, TG_263_file):
+        # Create a list to store new columns
+        new_columns = []
+
         # Iterate over the TG_263_file DataFrame
         for index in TG_263_file.index:
             for column in self.TG_263_column_names:
                 TG263name = TG_263_file.loc[index, column]  # get the name from the TG263 file
                 if pd.isnull(TG263name):  # skip if the name is NaN
                     continue
-                # Add the name to the stored_dictionary if not already present
+                # Add the name to new_columns if not already present in stored_dictionary
                 if TG263name not in self.stored_dictionary.columns:
-                    self.stored_dictionary.loc[:, TG263name] = 0
+                    new_columns.append(TG263name)
+        new_df = pd.DataFrame(columns=new_columns)
+        self.stored_dictionary = pd.concat([self.stored_dictionary, new_df], axis=1)
 
     def get_all_roi(self):
         # this function will search the directory for RTSTRUCT files and create a new dictionary of ROI names and file names, this can later be compared to the stored_dictionary
@@ -89,8 +93,8 @@ class StructureHarmonizer:
                         else:
                             # if not, add the ROIName to the dictionary with the file name as the value
                             self.roi_dict[roi_name] = [file]
-                        if roi_name not in self.stored_dictionary.index:
-                            self.stored_dictionary.loc[roi_name, :] = 0
+                        #if roi_name not in self.stored_dictionary.index:
+                        #   self.stored_dictionary.loc[roi_name, :] = 0
 
     def get_closest_matches(self, TG_263_file):
         # Initialize an empty dictionary to keep track of the closest matches
@@ -104,10 +108,10 @@ class StructureHarmonizer:
                     continue
 
                 TG263_id = TG_263_file.loc[index, self.TG_263_ID_column]  # Get the TG263 ID
-                TG263name_lower = TG263name.lower().strip()  # Convert to lowercase and strip spaces
-                TG263name_words = set(TG263name_lower.split()) # Split the name into set of words
+                TG263name_lower = TG263name.lower().strip() 
+                TG263name_words = set(TG263name_lower.split())
                 for roi in self.roi_dict:
-                    roi_lower = roi.lower().strip()  # Convert to lowercase and strip spaces
+                    roi_lower = roi.lower().strip() 
                     roi_words = set(roi_lower.split())
 
                     # check to make sure the stored_dictionary exists and is not empty before checking it and that TG263_id exists in the stored_dictionary
@@ -117,7 +121,6 @@ class StructureHarmonizer:
                             continue
 
                     score = fuzz.ratio(TG263name_lower, roi_lower)  # Calculate the match score
-                    # If the score is above the threshold, add the match to the DataFrame
                     if score >= self.threshold:
                         # Add the TG263 ID as a column name to the DataFrame and identify it as a match to the corresponding roi
                         self.stored_dictionary.loc[roi, TG263_id] = 1
@@ -163,10 +166,10 @@ class StructureHarmonizer:
                         print("Match is incorrect. Trying next closest match...")
                         self.stored_dictionary.loc[roi, column] = 0
                         self.closest_matches[roi].pop(0)
-                    elif user_input.lower() in ['skip', 's']:
+                    elif user_input.lower() in ['skip', 's', 'next', 'n']:
                         print("Skipping review of this item.")
                         break
-                    elif user_input.lower() == 'end':
+                    elif user_input.lower() in ['end','e','q','quit','exit','stop','/r/n','/r','/n']:
                         print("Ending review process.")
                         break
                     else:
@@ -177,13 +180,12 @@ class StructureHarmonizer:
                         self.stored_dictionary.loc[roi, 'USER_' + custom_name] = 1
                         print(f"Added custom match name '{custom_name}' for {roi}.")
                         break
-                if user_input.lower() == 'end':
+                if user_input.lower() in ['end','e','q','quit','exit','stop','/r/n','/r','/n']:
                     break
 
     def write_to_csv(self):
         # Save the DataFrame as a CSV file
         self.stored_dictionary.to_csv(self.output_file)
-
 
 if __name__ == '__main__':
     # set the directory to search
@@ -200,4 +202,4 @@ if __name__ == '__main__':
 
     # Create an instance of StructureHarmonizer and call the harmonize_structures method
     harmonizer = StructureHarmonizer(directory, output_file, pattern, TG_263_file_path, threshold=threshold)
-    harmonizer.run()
+    harmonizer.run_dictionary()
