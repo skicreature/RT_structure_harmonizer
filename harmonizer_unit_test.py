@@ -12,7 +12,7 @@ class TestStructureHarmonizer(unittest.TestCase):
 
     def test_init(self):
         self.assertEqual(self.harmonizer.directory, self.directory)
-        self.assertEqual(self.harmonizer.output_file, self.output_file)
+        self.assertEqual(self.harmonizer.harmonized_csv_path, self.output_file)
         self.assertEqual(self.harmonizer.pattern, self.pattern)
         self.assertEqual(self.harmonizer.TG_263_file_path, self.TG_263_file_path)
         self.assertEqual(self.harmonizer.threshold, self.threshold)
