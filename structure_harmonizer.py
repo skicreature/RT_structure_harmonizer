@@ -1,5 +1,6 @@
 import os
 import fnmatch
+from typing import Any
 import pydicom
 from pydicom import dcmread
 import numpy as np
@@ -97,6 +98,9 @@ class StructureHarmonizer:
         self.get_closest_matches(TG_263_file) # finds the closest matches for each roi name, and stores them in a dictionary and keeps track of the closest matches in a list with fuzzy ratio scores
 
     def get_roi_paths(self, output_path):
+        '''
+        This method is used to create a json file of roi names and their corresponding file paths. This is useful for debugging and for creating a dictionary of roi names and their corresponding file paths to be used in the future.
+        '''
         if not os.path.exists(output_path):
             with open(output_path, "w") as file:
                 json.dump({}, file)
@@ -157,7 +161,7 @@ class StructureHarmonizer:
         self.harmonized_df.to_csv(self.harmonized_csv_path)
 
     # ------------- MAIN Methods -------------
-    def get_all_TG263names(self, TG_263_file):
+    def get_all_TG263names(self, TG_263_file: pd.DataFrame):
         # Create a dictionary to store new columns
         self.TG263name_dict = {}
         # Iterate over the TG_263_file DataFrame
@@ -203,30 +207,23 @@ class StructureHarmonizer:
                     json.dump(self.roi_dict, file, indent=4, sort_keys=True)
             b.finish()
 
-    def match_roi(self, roi, TG_263_file):
+    def match_roi(self, roi, TG_263_file: pd.DataFrame):
         '''
         input: single roi name, and the TG263 file
         TODO figure out why matches above threshold are not getting recorded, yet they are being skipped during review
         this is where the matching happens and if a match is found, it is added to the harmonized_df. If functioning correctly then entries to the dictionary should be unique with no duplicate roi names or TG263 names
+        TODO: IMPORTANT integrate FMAID, change to utilize a TG263name_dict that can be loaded from a json file
         '''
         roi_lower = roi.lower().strip()
-        roi_words = set(roi_lower.split())
         closest_matches = {}
         for index in TG_263_file.index:
             for column in self.TG_263_standard_lists:
-                TG263name = TG_263_file.loc[index, column]  # get the name to match from the TG263 file
+                TG263name:str = str(TG_263_file.loc[index, column])  # get the name to match from the TG263 file
                 if pd.isnull(TG263name):  # skip if the name is NaN
                     continue
                 TG263_id = TG_263_file.loc[index, self.TG_263_standard_name_col]  # Get the TG263 ID
                 # FMAID = TG_263_file.loc[index, self.TG_263_FMAID_col] #TODO, IMPORTANT integrate FMAID
                 TG263name_lower = TG263name.lower().strip()
-                TG263name_words = set(TG263name_lower.split())
-
-                # check to make sure the harmonized_df exists and is not empty before checking it and that TG263_id exists in the harmonized_df
-                # Skip the matching process if the item already has a match in the harmonized_df as indicated by a 1 in the column
-                # if not self.harmonized_df.empty and TG263_id in self.harmonized_df:
-                #if ((not self.harmonized_df.empty) and TG263_id in self.harmonized_df.columns) and (roi in self.harmonized_df.index and self.harmonized_df.loc[roi, TG263_id] == 1):
-                #    continue
 
                 score = fuzz.ratio(TG263name_lower, roi_lower)  # Calculate the match score
                 if score >= self.threshold:
@@ -242,7 +239,7 @@ class StructureHarmonizer:
 
         return closest_matches
 
-    def get_closest_matches(self, TG_263_file):
+    def get_closest_matches(self, TG_263_file: pd.DataFrame):
         # Initialize an empty dictionary to keep track of the closest matches
         self.closest_matches = {}
 
@@ -299,14 +296,13 @@ class StructureHarmonizer:
 if __name__ == '__main__':
     # set the directory to search
     # directory = '/pct_ids/users/wd982598/test_requite'
+    '''
     directory = '/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/prostate_test/test_requite'
     output_file ='/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/structure_dictionary.csv'
     TG_263_file_path= '/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/TG263_Nomenclature_Worksheet_20170815.xls'
-
-
     # Define the match quality threshold
     threshold = 88
-
     # Create an instance of StructureHarmonizer and call the harmonize_structures method
     harmonizer = StructureHarmonizer(directory, output_file, TG_263_file_path, threshold=threshold)
     harmonizer.run_harmonize_dict()
+    '''

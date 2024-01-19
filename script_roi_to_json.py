@@ -12,10 +12,10 @@ from structure_harmonizer import StructureHarmonizer
 
 # set the directory to search
 # directory = '/pct_ids/users/wd982598/test_requite'
-#directory = '/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/prostate_test/test_requite'
+directory = '/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/prostate_test/test_requite'
 output_file ='/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/structure_dictionary.csv'
 TG_263_file_path= '/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/TG263_Nomenclature_Worksheet_20170815.xls'
-directory = '/mnt/t/Batch_1/'
+#directory = '/mnt/t/Batch_1/'
 
 # Define the match quality threshold
 threshold = 88
