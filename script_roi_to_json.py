@@ -23,4 +23,4 @@ threshold = 88
 # Create an instance of StructureHarmonizer and call the harmonize_structures method
 harmonizer = StructureHarmonizer(directory, output_file, TG_263_file_path, threshold=threshold)
 
-harmonizer.get_roi_paths('/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/structure_json_file.json')
+harmonizer.run_get_roi_to_json('/home/sacketjj/Jupyter-sandbox/REQUITE_Prostate/structure_harmonization/structure_json_file.json')

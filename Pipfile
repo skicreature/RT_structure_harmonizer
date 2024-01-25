@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pydicom = "*"
+numpy = "*"
+pandas = "*"
+seaborn = "*"
+openpyxl = "*"
+scikit-learn = "*"
+fuzzywuzzy = "*"
+progress = "*"
+jupyterlab = "*"
+pathlib = "*"
+xlrd = "*"
+pyarrow = "*"
+
+[dev-packages]
+ipykernel = "*"
+
+[requires]
+python_version = "3.10"
