@@ -63,7 +63,7 @@ class StructureHarmonizer:
         output_file: str | pathlib.Path | os.PathLike,
         TG_263_file_path: str | pathlib.Path | os.PathLike,
         threshold: int = 80,
-        roi_dict_path: str = "json_roi_dict.json",
+        roi_json_path: str = "json_roi_dict.json", #TODO modify this to be unique to each run if not specified by user
     ):
         self.directory = directory
         self.pattern = "RQ*_RTSTRUCT*.DCM"  # set the regex pattern to match
@@ -71,16 +71,17 @@ class StructureHarmonizer:
         self.threshold = threshold
         self.roi_dict = {}
         self.closest_matches = {}
-        self.roi_dict_path = roi_dict_path
-        self.TG263name_dict = {}# perhaps this should be created later so 
+        self.roi_json_path = roi_json_path
+        self.TG263_name_dict = {}# perhaps this should be created later so 
                                 # so it's existence can be tested for
+        self.TG_263_names_to_match = {} #consider replaces TG263_name_dict with only this as they may be redundant
         self.TG_263_file_path = TG_263_file_path
         self.TG_263_df = pd.read_excel(self.TG_263_file_path)
-        self.TG_263_standard_lists = [
+        self.TG_263_cols_to_match = [
             "TG263-Primary Name", 
             "TG-263-Reverse Order Name"
             ]
-        self.TG_263_standard_name_col = "TG263-Primary Name"
+        self.TG_263_prime_name_col = "TG263-Primary Name"
         self.match_roi = (self.match_roi_no_json)  
         # set the matching method to match_roi_json by default
         # if output_file already exists, load it as a harmonized_df
@@ -93,14 +94,18 @@ class StructureHarmonizer:
     # ------------------------- Program order / sequences ----------------------
     def run_default(self):
         """
-        A default program flow to be used if the user doesn't want to
-        customize the process harmonizes structures, querys whether
-        user wants to review matches, and then writes results to csv file
+        A default program flow to be used if the user doesn't have pre-existing 
+        results and does not want to customize the process harmonizes structures
+        querys whether user wants to review matches
+        Final step is to write results to csv file
         """
-        self.get_all_ROInames()  # gets ROInames from dicom structures
+        if not os.path.exists(self.roi_json_path):
+            self.get_all_ROInames(self.roi_json_path)  # gets ROInames from dicom structures
+        else:
+            self.load_json_roi_dict(self.roi_json_path)
         self.get_all_TG263names()  # gets TG263 names from excel file
         self.update_harmonized_df()  # update harmonized df to include new TG263 and ROI names
-        self.run_harmonization()
+        self.run_harmonization() # performs the matching process
         skip_review = input("Do you want to begin review? (yes/no):")
         if skip_review.lower() not in ["no", "n"]:
             self.review_matches()
@@ -115,7 +120,7 @@ class StructureHarmonizer:
         """
         # self.get_all_ROInames()
         # self.update_harmonized_df()
-        self.load_json_roi_dict(self.roi_dict_path)
+        self.load_json_roi_dict(self.roi_json_path)
         self.update_harmonized_df()
         self.get_closest_matches()
 
@@ -132,7 +137,7 @@ class StructureHarmonizer:
             raise ValueError("output_path must be a JSON file")
         else:
             print("json exists proceeding to update it")
-        self.get_all_ROInames(output_path=output_path)
+        self.get_all_ROInames(roi_json_path=output_path)
         # run get all roi, but pass output path to save the dict to a json file
 
     ############################################################################
@@ -163,11 +168,12 @@ class StructureHarmonizer:
     
     def update_harmonized_df(self):
         """
-        Add columns for each key in TG263name_dict and roi_dict to harmonized_df if each structure exists and is not empty
+        Add columns for each key in TG263name_dict and roi_dict to harmonized_df
+        if each structure exists and is not empty
         """
-        if hasattr(self, "TG263name_dict") and self.TG263name_dict:
+        if hasattr(self, "TG263_name_dict") and self.TG263_name_dict:
             # Create a dictionary with None values for new columns
-            new_columns = {key: np.nan for key in self.TG263name_dict.keys() if key not in self.harmonized_df.columns}
+            new_columns = {key: np.nan for key in self.TG263_name_dict.keys() if key not in self.harmonized_df.columns}
             # Add new columns to the DataFrame
             self.harmonized_df = self.harmonized_df.assign(**new_columns)
 
@@ -179,28 +185,11 @@ class StructureHarmonizer:
             self.harmonized_df = self.harmonized_df.reindex(new_indices)
   
     def load_json_roi_dict(self, roi_dict_path):
-        '''
+        """
         Loads a json that represents the roi_dict
-        '''
+        """
         with open(roi_dict_path, "r") as file:
             self.roi_dict = json.load(file)
-
-    def get_ROIname_from_file(self, file_path):
-        """
-        Uses dcmread to get all the roi_names from a file and put them in a
-        dictionary for that file.
-        In practice this is called by get_all_roi and then each file is
-        processed in parallel
-        """
-        ds = dcmread(file_path)
-        roi_names = [str(roi.ROIName) for roi in ds.StructureSetROISequence]
-        roi_dict = {}  # Create a new dictionary, local variable
-        for roi_name in roi_names:
-            if roi_name in roi_dict:
-                roi_dict[roi_name].append(file_path)
-            else:
-                roi_dict[roi_name] = [file_path]
-        return roi_dict
 
     def write_harmonization_dict_to_csv(self):
         """
@@ -218,10 +207,16 @@ class StructureHarmonizer:
         This TG263name_dict is used by update_harmonized_dict to add new
         columns to the harmonized_df.
         """
-        self.TG263name_dict = {}
+        self.TG263_name_dict = {}
         # Iterate over the TG_263_file DataFrame
         for index in self.TG_263_df.index:
-            for column_heading in self.TG_263_standard_lists:
+            #create dictionary of TG263 primary names for keys and a list of all TG263 names to match for values
+            self.TG_263_names_to_match[self.TG_263_df.loc[index, self.TG_263_prime_name_col]] = list(set([self.TG_263_df.loc[index, col] for col in self.TG_263_cols_to_match]))
+
+            # Keeping the below code for now since it may be more compatible with 
+            # the old code and will work when loading a CSV file by skipping
+            # names that are already in the harmonized_df
+            for column_heading in self.TG_263_cols_to_match:
                 TG263name = self.TG_263_df.loc[
                     index, column_heading
                 ]  # get the name from the TG263 file
@@ -229,12 +224,29 @@ class StructureHarmonizer:
                     continue
                 # Add the name to TG263name_dict if not already in harmonized_df
                 if TG263name not in self.harmonized_df.columns:
-                    self.TG263name_dict[TG263name] = None
+                    self.TG263_name_dict[TG263name] = None
 
-    def get_all_ROInames(self, output_path=None, every_n_files: int = 10):
+    def get_ROIname_from_file(self, file_path):
+        """
+        Uses dcmread to get all the roi_names from a DICOM file and put them in a
+        dictionary for that file.
+        In practice this is called by get_all_roi and then each file is
+        processed in parallel
+        """
+        ds = dcmread(file_path)
+        roi_names = [str(roi.ROIName) for roi in ds.StructureSetROISequence]
+        roi_dict = {}  # Create a new dictionary, local variable
+        for roi_name in roi_names:
+            if roi_name in roi_dict:
+                roi_dict[roi_name].append(file_path)
+            else:
+                roi_dict[roi_name] = [file_path]
+        return roi_dict
+
+    def get_all_ROInames(self, roi_json_path=None):
         """
         Retrieves all ROI names from the DICOM file matching the self.pattern and adds them to the roi_dict. 
-        On a large dataset this can take some time, so it is recommended to use the output_path to save the roi_dict to a json file.
+        On a large dataset this can take some time, so it is recommended to use the roi_json_path to save the roi_dict to a json file.
         """
         if not os.path.exists(self.directory):
             print("Directory does not exist")
@@ -261,9 +273,9 @@ class StructureHarmonizer:
             # Close the pool and wait for all the workers to finish
             pool.close()
             pool.join()
-            # If output_path is provided, update the JSON file one last time
-            if output_path:
-                with open(output_path, "w") as file:
+            # If output_path is provided, update the JSON file
+            if roi_json_path:
+                with open(roi_json_path, "w") as file:
                     json.dump(self.roi_dict, file, indent=4, sort_keys=True)
             b.finish()
 
@@ -310,14 +322,14 @@ class StructureHarmonizer:
         roi_lower = roi.lower().strip()
         closest_matches = {}
         for index in self.TG_263_df.index:
-            for column in self.TG_263_standard_lists:
+            for column in self.TG_263_cols_to_match:
                 TG263name: str = str(
                     self.TG_263_df.loc[index, column]
                 )  # get the name to match from the TG263 file
                 if pd.isnull(TG263name):  # skip if the name is NaN
                     continue
                 TG263_id = self.TG_263_df.loc[
-                    index, self.TG_263_standard_name_col
+                    index, self.TG_263_prime_name_col
                 ]  # Get the TG263 ID
                 TG263name_lower = TG263name.lower().strip()
                 score = fuzz.ratio(
@@ -344,6 +356,24 @@ class StructureHarmonizer:
                             key=lambda x: x[1], reverse=True
                         )  # Sort by score
         return closest_matches
+    
+    def calculate_match_score(self, row):
+        roi_lower = row.name.lower().strip()
+        max_scores = {}
+
+        #TODO rewrite this to use TG263_names_to_match = [TG263prime_name : [name, name, ....]]
+        for key,val in self.TG_263_names_to_match.items():
+            max_score = 0
+            for TG263name in val:
+                TG263name_lower = TG263name.lower().strip()
+                score = fuzz.ratio(TG263name_lower, roi_lower)
+                if score > max_score:
+                    max_score = score
+            max_scores[key] = max_score
+        return pd.Series(max_scores)
+    
+    def harmonize_df_get_scores(self):
+        self.harmonized_df = self.harmonized_df.assign(**self.harmonized_df.apply(self.calculate_match_score, axis=1))
     
     # ---------------------------- Review --------------------------------------
     def review_matches(self):
