@@ -16,6 +16,7 @@ jupyterlab = "*"
 pathlib = "*"
 xlrd = "*"
 pyarrow = "*"
+ipywidgets = "*"
 
 [dev-packages]
 ipykernel = "*"
