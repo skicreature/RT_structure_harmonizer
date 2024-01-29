@@ -1,0 +1,3557 @@
+,dummy_column
+dummy_index,0
+ intestino tc1,0
+ paloma,0
+(D) Blad OL,0
+(D) Blad Opt,0
+(D) CD OL,0
+(D) CD OPT,0
+(D) LB OL,0
+(D) PRSV OL,0
+(D) PRSV OPT,0
+(D) PTV 70.2 OL,0
+(D) Rect Opt,0
+(D)Ptv 70.2 opt,0
+(PTV2-dig)-rct,0
+(ptv pelvis),0
+(ptvopt-dig)-rec,0
+1,0
+10 Gy 2015,0
+100%buiten PTV2,0
+2,0
+2MARKUP_PTVA,0
+2OPT_Bladder,0
+2OPT_Bowel,0
+2OPT_Bowel+PTVA,0
+2OPT_PTVA,0
+2OPT_PTVA_BST,0
+2OPT_PTVA_BST2,0
+2OPT_PTVB,0
+2OPT_PTVB BST,0
+2OPT_PTVB_CTRL,0
+2OPT_Rectum,0
+2PTVA_Ring,0
+2PTVB,0
+2PTVexp,0
+2Prostate,0
+3,0
+3Reperi,0
+4,0
+4536.80cGy,0
+51.3gy,0
+5350.00cGy,0
+5350.00cGy_1,0
+"62,51G_exPTV1",0
+62.51G_exPTV1,0
+6420.00cGy,0
+72.5%,0
+76,0
+ABO,0
+AJM Bowel,0
+AJM bladder,0
+AJM rectum,0
+ALL_Targets_exp,0
+ALLtarget,0
+ALO_In_Vivo_PT,0
+ANO,0
+ANO TC1,0
+ANO TC2,0
+ANORETTO,0
+ANOin,0
+ANSA,0
+ANSE,0
+ANSE 0.5mm,0
+ANSE INTESTINALI,0
+ANT_In_Vivo_PT,0
+APEX,0
+ARIA,0
+ARO_In_Vivo_PT,0
+ARTEFACT,0
+ARTIFACT,0
+AVOID,0
+A_inPTV1,0
+Abdominalhoehle,0
+AcqIsocenter,0
+Acqua,0
+Addbody,0
+Adenop,0
+Adenopatias,0
+AllTarget,0
+AllTargets,0
+AnCa_exPTV1_3,0
+AnCa_exPTV1c_3,0
+AnCa_exPTV1fr18,0
+AnCan+Rec,0
+AnCan+Rec inPTV,0
+AnCan+Rec noPTV,0
+Anaal kanaal,0
+Anal Canal,0
+Anal Canal inPTV,0
+Anal Canal noPTV,0
+Anal canal,0
+Anal canal inPTV,0
+Anal canal noPTV,0
+Anal+Rectum,0
+AnalCanal,0
+AnalCanal inPTV,0
+AnalCanal noPTV,0
+AnalCanal+Rectum,0
+AnalCanal-PTV,0
+AnalCanalInPTV,0
+AnalCanalRectum,0
+AnalSphincter,0
+Anal_canal,0
+Analcanal,0
+Anca_inPTV1,0
+Ano,0
+Ano 1,0
+Ano 2,0
+Ano TAC 1,0
+Ano TAC 2,0
+Ano TC 1,0
+Ano TC 2,0
+Ano TC2,0
+Ano tac 1,0
+Ano tc 1,0
+Ano tc 2,0
+Ano tc 3,0
+Ano tc 4,0
+Ano tc1,0
+Ano tc2,0
+Anoretto,0
+Ant_In_Vivo_PT,0
+Anus,0
+Anus (ant.),0
+Anus (ext.),0
+Anus (int.),0
+Anus (post.),0
+Apex,0
+Artefact,0
+Artefacts,0
+Artefakte,0
+Artefatti,0
+Artifact,0
+Artificial HIP,0
+Avoidance,0
+Avoidance 56,0
+Avoidance 70,0
+Avoidance 77,0
+Avoidance0,0
+Ax_lim,0
+BLADDER,0
+BLADDER MIN FILL,0
+BLADDEROPT,0
+BLADDEROPT2,0
+BL_inPTV1c,0
+BMILEO,0
+BMILEO IN54,0
+BMLS,0
+BMLS IN54,0
+BMPELVIS,0
+BMPELVIS IN54,0
+BMPELVIS IN74,0
+BMS LS,0
+BMS ileo,0
+BM_ILEO,0
+BM_LS,0
+BM_PELVIS,0
+BODY,0
+BOOST,0
+BOOst,0
+BOWEL,0
+BOWEL AND PTVB,0
+BOWEL IN PTVA,0
+BOWEL KVK,0
+BOWEL2,0
+BULBO,0
+BULBO P,0
+BULBO PENIENO,0
+BaseDroite,0
+BaseGauche,0
+Bauchhöhle,0
+Beacons,0
+Becken,0
+Becken 44Gy,0
+Becken LAW,0
+Becken/LAW,0
+Becken_mod,0
+Beckenknochen,0
+Bl_exPTV1_3,0
+Bl_exPTV1c_3,0
+Bl_exPTV1fr18,0
+Bl_inPTV1,0
+Bl_inPTV1fr18,0
+Bl_inPTV2,0
+Blaas,0
+Blaas Crop,0
+Blaas noPTV,0
+Blad_inPTV1,0
+Bladd in PTV,0
+Bladd&PTV,0
+Bladder,0
+Bladder CT,0
+Bladder Crop,0
+Bladder Eval,0
+Bladder Liam,0
+Bladder Opt,0
+Bladder Opt 2,0
+Bladder Opt2,0
+Bladder Wall,0
+Bladder avoid,0
+Bladder avoid1,0
+Bladder avoid2,0
+Bladder correct,0
+Bladder in PTV,0
+Bladder noPTV,0
+Bladder opt,0
+Bladder opt1,0
+Bladder wall,0
+Bladder-PTV,0
+BladderWall,0
+Bladder_Inside,0
+Bladder_PTV,0
+Bladder_opt45Gy,0
+Bladder_opt70.2G,0
+Bladder_out,0
+Bladder_yl,0
+Bladdo,0
+Blase,0
+Blase MRT,0
+Blase union,0
+Blood vessels,0
+Blood vessels2,0
+Body,0
+Body1,0
+Bolsa colostom,0
+Bolus Bag,0
+Bones,0
+Boost,0
+Boost Loge,0
+Bowel,0
+Bowel 56,0
+Bowel Bag,0
+Bowel Bag noPTV,0
+Bowel InPTV,0
+Bowel JD,0
+Bowel NoPTV,0
+Bowel PTV,0
+Bowel PTV70,0
+Bowel and PTVA,0
+Bowel and PTVB,0
+Bowel bag,0
+Bowel bag noPTV,0
+Bowel in Loge,0
+Bowel in PTV,0
+Bowel in PTVA,0
+Bowel in PTVB,0
+Bowel in PTVN,0
+Bowel in Pelvis,0
+Bowel inPTV,0
+Bowel noPTV,0
+Bowel not,0
+Bowel not Loge,0
+Bowel not PTV,0
+Bowel not Pelvis,0
+Bowel-PTV56,0
+Bowel1,0
+BowelB-PTV_5600,0
+BowelB-PTV_7700,0
+BowelBAG,0
+BowelBInPTV_5600,0
+BowelBInPTV_7700,0
+BowelBag,0
+BowelBag Crop,0
+BowelBag in PTV,0
+BowelBag noPTV,0
+BowelBag not PTV,0
+BowelBag-PTV,0
+BowelBag-Pelv_05,0
+BowelBagInPTV,0
+BowelBagInPTV56,0
+BowelBagInPTV70,0
+BowelBagInPTV_66,0
+BowelBagInPTV_77,0
+BowelBagInPTVt,0
+BowelInPTV,0
+BowelInPelvis,0
+BowelNotPTV,0
+BowelOPT,0
+Bowel_Check,0
+Bowelbag,0
+BowelbagInPTV70,0
+BowelinPTV,0
+BowelinPTVLoge,0
+BowelnotPTV,0
+Bowels,0
+Bowels Opt,0
+Bst,0
+Bulb,0
+Bulb Penis,0
+Bulb penis,0
+Bulb penis crop,0
+BulbPenis,0
+BulbPenis-PTV,0
+Bulbo,0
+Bulbus,0
+Bulbus Penis,0
+Bulbus p.,0
+Bulbus penis,0
+Bulbus penis_1,0
+CALYPSO,0
+CALYPSO 1,0
+CALYPSO 2,0
+CALYPSO 3,0
+CALYPSO1,0
+CALYPSO2,0
+CALYPSO3,0
+CANALE ANALE,0
+CAUDA,0
+CAV ADDOM 0.5mm,0
+CAVITA ADDOMINAL,0
+CAVITA INTESTINA,0
+CDPTV,0
+CDPTVOPT,0
+CENTRATURA,0
+CI-5mm,0
+COLD,0
+COLON,0
+COLON TAC 2,0
+COLON-SIGMA,0
+CONTOUR EXTERNE,0
+CORD,0
+CORR,0
+CTV,0
+CTV  DIL,0
+CTV  P michi,0
+CTV  PROSTATA,0
+CTV  VS,0
+CTV 45,0
+CTV 50,0
+"CTV 50,4 Gy",0
+CTV BOOST,0
+CTV CD,0
+CTV KLIER,0
+CTV LAO,0
+CTV LN,0
+CTV LNF +,0
+CTV LOGE,0
+CTV LOGGIA,0
+CTV LOGGIA BOOST,0
+CTV LOGGIA PROST,0
+CTV Loge,0
+CTV Meta,0
+CTV N,0
+CTV N - Bowel,0
+CTV N PET +,0
+CTV N exp,0
+CTV N+ PET,0
+CTV N2,0
+CTV Nesp,0
+CTV P,0
+CTV P VS,0
+CTV P+ VS,0
+CTV P+VS,0
+CTV PELVI,0
+CTV PROSTATA,0
+CTV PROSTATA + V,0
+CTV Para-aort.,0
+CTV Pelvis,0
+CTV Prostaat,0
+CTV Prostaat +zb,0
+CTV Prostaatloge,0
+CTV Prostloge,0
+CTV RECIDIVA,0
+CTV SCN dx,0
+CTV TC,0
+CTV VESCICOLE,0
+CTV VS,0
+CTV VS exp,0
+CTV VSesp,0
+CTV ZB,0
+CTV Zaadblaas,0
+CTV adapted,0
+CTV exp,0
+CTV exp 50,0
+CTV ganglionar,0
+CTV ganglios,0
+CTV klier obt re,0
+CTV klieren,0
+CTV loge,0
+CTV loggia,0
+CTV loggia P,0
+CTV loggia p,0
+CTV loggia pr,0
+CTV loggia prost,0
+CTV mam dx,0
+CTV mamm  dx,0
+CTV mamm dx,0
+CTV mamm sx,0
+CTV pelvis,0
+CTV prost fr18,0
+CTV prostaatloge,0
+CTV prostata,0
+CTV prostate,0
+CTV recidiva,0
+CTV-N 45,0
+CTV-PS,0
+CTV-ganglionar,0
+CTV1,0
+CTV1 CT1,0
+CTV1 union,0
+CTV2,0
+CTV2 CT2,0
+CTV3,0
+CTV4500,0
+CTV70.2,0
+CTV7020,0
+CTVA,0
+CTVB,0
+CTVKlieren66Gy1,0
+CTVKlieren66Gy2,0
+CTVN,0
+CTVN (new scan),0
+CTVN (old scan),0
+CTVN 1,0
+CTVN MOD,0
+CTVN MOD.,0
+CTVN cropped,0
+CTVN exp,0
+CTVN incomplete,0
+CTVN nd,0
+CTVN sv,0
+CTVN-Int,0
+CTVN1,0
+CTVNesp,0
+CTVNexp,0
+CTVNinInt,0
+CTVNintBowel,0
+CTVNintTenue,0
+CTVNopt,0
+CTVVSexp,0
+CTV_45sb,0
+CTV_5565,0
+CTV_5600,0
+CTV_59.4,0
+CTV_70.2SB,0
+CTV_7020,0
+CTV_7700,0
+CTV_All,0
+CTV_Lnn,0
+CTV_SV,0
+CTV_ZB,0
+CTV_boost,0
+CTV_chris,0
+CTV_nmr,0
+CTV_old,0
+CTV_pelvis,0
+CTV_pros,0
+CTVboost,0
+CTVesp,0
+CTVexp,0
+CTVloggia Esp,0
+CTVmenoPTVesp,0
+CTVn,0
+CTVn_5600,0
+CTVn_Fat,0
+CTVn_elec,0
+CTVn_vasc_5,0
+CTVnodal boost,0
+CTVnode boost,0
+CTVnodeboost,0
+CTVnodes,0
+CTVopt,0
+CTVp,0
+CTVp adj 1406201,0
+CTVp adjusted,0
+CTVp1CT_pros,0
+CTVp1_pros,0
+CTVp1_prostCT,0
+CTVp1_vs,0
+CTVp1_vs2,0
+CTVp_7000,0
+CTVt,0
+CTVvs+silvia,0
+CTv ganglios,0
+Cabeza FD,0
+Cabeza FI,0
+Cabeza Fdcha,0
+Cabeza Fizq,0
+Cabeza dcha,0
+Cabeza izq,0
+Cadenas,0
+Calcificazioni,0
+Calypso,0
+Calypso 1,0
+Calypso 2,0
+Calypso 3,0
+Canale anale,0
+Carbon Fiber,0
+Colon,0
+Colon 1,0
+Colon 2,0
+Colon TC 4,0
+Colon TC1,0
+Colon TC2,0
+Colon tac 1,0
+Colon tac 2,0
+Colon tc 1,0
+Colon tc 2,0
+Colon tc1,0
+Colon tc2,0
+Colon- Sigma,0
+Colon-SIGMA,0
+Colon-Sigma,0
+Colon-sigma,0
+Colon-sigme,0
+Colon.sigma,0
+Colontc2,0
+Copy of Prostata,0
+Copy of Prostataloge,0
+Corazon,0
+CouchGrid,0
+CouchInterior,0
+CouchInterior1,0
+CouchRailLeft,0
+CouchRailRight,0
+CouchSurface,0
+CouchSurface1,0
+Cuore,0
+DIVERTICOLI,0
+DNU,0
+DNU1,0
+DNU2,0
+DNU3,0
+DP1,0
+DP2,0
+DP3,0
+DP4,0
+DP5,0
+Darm,0
+Darm inPTVLoge,0
+Darm inPTVPelvis,0
+Darm noPTVLoge,0
+Darm noPTVPelvis,0
+Densiteit,0
+Density corr,0
+Diverticolo,0
+Dose  90[%],0
+Dose 100[%],0
+Dose 102.4[%],0
+Dose 102.5[%],0
+Dose 102.6[%],0
+Dose 102.7[%],0
+Dose 102[%],0
+Dose 103.1[%],0
+Dose 103.2[%],0
+Dose 103.3[%],0
+Dose 103.4[%],0
+Dose 103.5[%],0
+Dose 103.5b[%],0
+Dose 103.6[%],0
+Dose 103.7[%],0
+Dose 103.8[%],0
+Dose 103[%],0
+Dose 104.2[%],0
+Dose 104.3[%],0
+Dose 104.5[%],0
+Dose 104.6[%],0
+Dose 104.7[%],0
+Dose 104.8[%],0
+Dose 104.9[%],0
+Dose 104[%],0
+Dose 105[%],0
+Dose 106.3[%],0
+Dose 106.5[%],0
+Dose 106[%],0
+Dose 107.1[%],0
+Dose 107.3[%],0
+Dose 107.6[%],0
+Dose 107.8[%],0
+Dose 107.9[%],0
+Dose 107[%],0
+Dose 108.4[%],0
+Dose 108.7[%],0
+Dose 108[%],0
+Dose 109[%],0
+Dose 109[%]1,0
+Dose 14.7[Gy],0
+Dose 1500[cGy],0
+Dose 1500[cGy].,0
+Dose 2670[cGy],0
+Dose 2720[cGy],0
+Dose 3850[cGy],0
+Dose 3860[cGy],0
+Dose 400[cGy],0
+Dose 40[Gy],0
+Dose 4300[cGy],0
+Dose 44.5[Gy],0
+Dose 44[Gy],0
+Dose 4600[cGy],0
+Dose 4650[cGy],0
+Dose 4680[cGy],0
+Dose 47.5[Gy],0
+Dose 47.87[Gy],0
+Dose 47.88,0
+Dose 47.88/test2,0
+Dose 47.88[Gy],0
+Dose 47.88[Gy]2,0
+Dose 4700[cGy],0
+Dose 4750[cGy],0
+Dose 4790[cGy],0
+Dose 4800[cGy],0
+Dose 4810[cGy],0
+Dose 4820[cGy],0
+Dose 4850[cGy],0
+Dose 4870[cGy],0
+Dose 4880[cGy],0
+Dose 4890[cGy],0
+Dose 4898[cGy],0
+Dose 4899[cGy],0
+Dose 4900[cGy],0
+Dose 4950[cGy],0
+Dose 5000[cGy],0
+Dose 5000[cGy]a,0
+Dose 500[cGy],0
+Dose 50[Gy],0
+Dose 51.3[Gy],0
+Dose 52.5[Gy],0
+Dose 53.2[Gy],0
+Dose 54[Gy],0
+Dose 5799[cGy],0
+Dose 57[Gy],0
+Dose 58.5[Gy],0
+Dose 58.8[Gy],0
+Dose 5800[cGy],0
+Dose 59.2[Gy],0
+Dose 59.5[Gy],0
+Dose 59.85[Gy],0
+Dose 59.9[Gy],0
+Dose 5900[cGy],0
+Dose 5950[cGy],0
+Dose 59[Gy],0
+Dose 59[Gy]bu,0
+Dose 59[Gy]x,0
+Dose 6000[cGy],0
+Dose 60Gy,0
+Dose 60[Gy],0
+Dose 62.45[Gy],0
+Dose 62.51[Gy],0
+Dose 62.51[Gy]2,0
+Dose 62.5[Gy],0
+Dose 63[Gy],0
+Dose 64.5[%],0
+Dose 64[%],0
+Dose 64[Gy],0
+Dose 65[Gy],0
+Dose 66.15[Gy],0
+Dose 66.5[Gy],0
+Dose 66.6[Gy],0
+Dose 67.4[Gy],0
+Dose 67.5[Gy],0
+Dose 67.9[Gy],0
+Dose 68.2[Gy],0
+Dose 68.3[Gy],0
+Dose 68.4[%],0
+Dose 68.4[Gy],0
+Dose 68.6[Gy],0
+Dose 68.7[Gy],0
+Dose 68.9[Gy],0
+Dose 68[%],0
+Dose 68[Gy],0
+Dose 69.8[Gy],0
+Dose 69[Gy],0
+Dose 70.5[Gy],0
+Dose 70[Gy],0
+Dose 71.8[Gy],0
+Dose 71.9[%],0
+Dose 71[Gy],0
+Dose 72.3,0
+Dose 72.3[Gy],0
+Dose 72.4,0
+Dose 72.45[Gy],0
+Dose 72.4[Gy],0
+Dose 72.5,0
+Dose 72.5[%],0
+Dose 72.5[Gy],0
+Dose 72.6[Gy],0
+Dose 72.7[Gy],0
+Dose 72.8[Gy],0
+Dose 72.9[Gy],0
+Dose 72[%],0
+Dose 72[Gy],0
+Dose 73.1[Gy],0
+Dose 73.2[Gy],0
+Dose 73.3[Gy]bu,0
+Dose 73.4[Gy],0
+Dose 73.5[Gy],0
+Dose 73.7[Gy],0
+Dose 73[Gy],0
+Dose 74.1[Gy],0
+Dose 74.5[Gy],0
+Dose 75.4[Gy],0
+Dose 75.7[Gy],0
+Dose 75[%],0
+Dose 76.1[Gy]T5,0
+Dose 76.3[Gy],0
+Dose 76.5[Gy],0
+Dose 76.6[Gy],0
+Dose 76[Gy],0
+Dose 76[Gy]1,0
+Dose 77.7[%],0
+Dose 78.6[Gy],0
+Dose 78.8[Gy]T5,0
+Dose 78[%],0
+Dose 79.1[Gy],0
+Dose 79.2[Gy],0
+Dose 79.3[Gy],0
+Dose 79.4[Gy],0
+Dose 79.5[Gy],0
+Dose 79.5[Gy]*,0
+Dose 79.6,0
+Dose 79.6[Gy],0
+Dose 79.6[Gy]T4,0
+Dose 79.7[Gy],0
+Dose 79.8[Gy],0
+Dose 79.9[Gy],0
+Dose 79[Gy],0
+Dose 80.2[Gy],0
+Dose 80.5[Gy],0
+Dose 80.8[Gy],0
+Dose 80[%],0
+Dose 80[Gy],0
+Dose 8180[cGy],0
+Dose 81[%],0
+Dose 8200[cGy],0
+Dose 8200[cGy]2,0
+Dose 8240[cGy],0
+Dose 8240[cGy]k,0
+Dose 8250[cGy],0
+Dose 8300[cGy],0
+Dose 8300[cGy]2,0
+Dose 8350[cGy],0
+Dose 8360[cGy],0
+Dose 8390[cGy],0
+Dose 8400[cGy],0
+Dose 8400[cGy]b,0
+Dose 8450[cGy]r,0
+Dose 84[%],0
+Dose 89.3[%],0
+Dose 90,0
+Dose 90[%],0
+Dose 90[%]1,0
+Dose 90[%]hotspo,0
+Dose 91,0
+Dose 91[%],0
+Dose 94[%],0
+Dose 95[%,0
+Dose 95[%],0
+Dose 98[%],0
+Dose max 60 Gy,0
+Dose_47.88_Hulp,0
+Dosis 59Gy,0
+Dp3,0
+Duenndarm,0
+DunneDarm,0
+Duodenum,0
+Dünndarm F.,0
+External,0
+External ROI,0
+External-4_Rind,0
+F M,0
+FEM DX,0
+FEM SX,0
+FEMORE DESTRO,0
+FEMORE DX,0
+FEMORE SIN,0
+FEMORE SINISTR,0
+FEMORE SINISTRO,0
+FEMORE SN,0
+FEMORE SX,0
+FEMORE ds,0
+FHL,0
+FHR,0
+FM,0
+FVK of Prostata,0
+FVK of Prostataloge,0
+False Hip,0
+Fem Hd+Neck L,0
+Fem Hd+Neck R,0
+Fem Head L,0
+Fem Head R,0
+Femirkopf li,0
+Femoral Head L,0
+Femoral Head R,0
+Femoral head L,0
+Femoral head R,0
+FemoralHead L,0
+FemoralHead R,0
+FemoralHead_L,0
+FemoralHead_R,0
+FemoralJoint_L,0
+FemoralJoint_R,0
+Femoralhead_L,0
+Femoralhead_R,0
+Femore DX,0
+Femore Dx,0
+Femore SN,0
+Femore Sn,0
+Femore dx,0
+Femore sn,0
+Femore sx,0
+Femrkopf li,0
+Femukopf re,0
+Femur Left,0
+Femur Right,0
+Femur li.,0
+Femur re,0
+Femur-LT,0
+Femur-RT,0
+FemurKopf li,0
+FemurKopf re,0
+Femur_D,0
+Femur_G,0
+Femur_L,0
+Femur_R,0
+Femur_droit,0
+Femur_gauche,0
+Femurkop Li,0
+Femurkop Re,0
+Femurkopf li,0
+Femurkopf li.,0
+Femurkopf links,0
+Femurkopf re,0
+Femurkopf re.,0
+Femurkopf rechts,0
+Femurkopfli,0
+Femurkpof li,0
+Femutkopf li,0
+Femutkopf re,0
+Fiducial1,0
+Fiducial2,0
+Fiducial3,0
+Fiducial4,0
+Fiducial5,0
+Fiducial6,0
+Fiducial7,0
+FiducialMarker,0
+Foam Core,0
+For info,0
+For info only,0
+ForceHU,0
+ForceHU1,0
+GH ant,0
+GOLD MARKER,0
+GOLD MARKERS,0
+GTV,0
+GTV 77Gy,0
+GTV KLIER,0
+GTV Klier,0
+GTV LK,0
+GTV N,0
+GTV P VS,0
+GTV VS,0
+GTV klier,0
+GTV klier obt re,0
+GTV klieren,0
+GTV node1,0
+GTV prostata,0
+GTV recidief,0
+GTV+,0
+GTV-,0
+GTV1,0
+GTV_All,0
+GTV_Lnn,0
+GTV_Lnn1,0
+GTV_Lnn2,0
+GTV_Lnn3,0
+GTV_Lnn4,0
+GTV_Lnn_1,0
+GTV_Lnn_2,0
+GTV_Lnn_3,0
+GTV_PETklieren,0
+GTV_Prostata,0
+GTV_Prostata_SiB,0
+GTV_exp,0
+GTV_exp_0.3,0
+GTV_exp_0.5,0
+GTV_meta,0
+GTV_morf,0
+GTV_morf_1,0
+GTV_morf_2,0
+GTV_morf_exp,0
+GTV_morf_exp_0.5,0
+GTV_morf_skew,0
+GTV_morph,0
+GTV_morph1,0
+GTV_morph2,0
+GTV_morph3,0
+GTV_morph_1,0
+GTV_morph_2,0
+GTV_morph_3,0
+GTV_morph_All,0
+GTV_morph_All_exp,0
+GTV_morph_all,0
+GTVn,0
+GTVn_sum,0
+GTVp,0
+GTVplan,0
+GTVtra,0
+GTVvs,0
+Galbladder,0
+Ghost,0
+GrossLN's_sb,0
+H2O,0
+HERNIA,0
+HIP PRV,0
+HOT SOPRAVESC,0
+HOT_ANT,0
+HOT_POST,0
+HR CTVplan,0
+HR CTVtra,0
+HR_tbCTVp1_xx,0
+HR_tbGTVp1,0
+HU=0,0
+Harnblase,0
+Help,0
+Hernia,0
+Heup,0
+Heupprothese,0
+Huefte li,0
+Huefte li.,0
+Huefte re,0
+Huefte re.,0
+Hueftkopf li,0
+Hueftkopf re,0
+Hulp 1,0
+Hulp 2,0
+Humeruskopf li,0
+Humeruskopf re,0
+Hï¿½ftkopf links,0
+Hï¿½ftkopf rechts,0
+Hüfte li,0
+Hüfte re,0
+Hüftkopf L,0
+Hüftkopf R,0
+I1,0
+I2,0
+IGRT_MinBladder,0
+IGRT_minBladder,0
+IGRTminBLAD,0
+ILEUM,0
+IMRT_Rind1,0
+IMRT_Rind_1,0
+IMRT_Rind_2,0
+IMRT_Rind_2cm,0
+IMRT_Rind_3,0
+IMRT_Rind_3cm,0
+IN VESC 54,0
+IN VESC 60,0
+IN cav in 54,0
+IN retto 60,0
+IN sigma 60,0
+INFO_66.6ring,0
+INFO_overlap59.2,0
+INFO_overlap6cc,0
+INSTEL,0
+INSTELPUNT,0
+INTESTINAL LOOPS,0
+INTESTINO,0
+IR CTV,0
+IR_tbCTVp1,0
+IR_tbCTVp1_xx,0
+IR_tbGTVp1,0
+ISO CTV,0
+ISO FASE1,0
+ISO GTV,0
+ISO ProstLAG,0
+ISO Prostata,0
+ISO TC,0
+ISO ZV2/Boost,0
+ISO anonst/anon,0
+ISO-TC,0
+ISOCENTER,0
+ISOCENTRO,0
+ISOTC,0
+Ileum,0
+Iliac LNs,0
+Iliac LNs2,0
+Iliac Nodes,0
+InitLaserIso,0
+InitMatchIso,0
+Instelpunt,0
+Int Non CTVN,0
+Intestino,0
+Intestino 2,0
+Intestino TC 1,0
+Intestino TC 2,0
+Intestino TC1,0
+Intestino TC2,0
+Intestino tc 1,0
+Intestino tc 2,0
+Intestino tc 4,0
+Intestino tc1,0
+Intestino tc2,0
+IntestinoTC1,0
+Intestinotc2,0
+Iso F1,0
+Iso Fase 1,0
+Iso TC,0
+IsoFase1,0
+IsoTAC,0
+IsoTC,0
+Iso_TC,0
+IsocTC,0
+Isocenter 1,0
+Isocenter 10,0
+Isocenter 11,0
+Isocenter 12,0
+Isocenter 13,0
+Isocenter 14,0
+Isocenter 15,0
+Isocenter 16,0
+Isocenter 17,0
+Isocenter 18,0
+Isocenter 19,0
+Isocenter 2,0
+Isocenter 20,0
+Isocenter 21,0
+Isocenter 22,0
+Isocenter 23,0
+Isocenter 24,0
+Isocenter 3,0
+Isocenter 4,0
+Isocenter 5,0
+Isocenter 6,0
+Isocenter 7,0
+Isocenter 8,0
+Isocenter 9,0
+Isocenter1,0
+Isocentro,0
+Isocentro F1,0
+Isocentro Fase 1,0
+IsocentroF1,0
+IsocentroF2,0
+KM,0
+KVue Couch Top,0
+Kidney L,0
+Kidney R,0
+Kidney_L,0
+Kidney_R,0
+Knochen,0
+Kopie Charlien,0
+KÖRPER,0
+Körper,0
+L FHN,0
+L Fem Head,0
+L Femoral Head,0
+L femoral head,0
+L femur,0
+L hip prosthesis,0
+L prosthesis head,0
+L prosthesis shaft,0
+LAG,0
+"LAG + ZV -50,4G",0
+LAO_In_Vivo_PT,0
+LARGE BOWEL,0
+LARGEBOWELOPT,0
+LAW,0
+LB  IN 70.2,0
+LB Opt,0
+LECHO,0
+LECHO QX,0
+LEFT,0
+LFH,0
+LHOF,0
+LHOF LW,0
+LHOF PRV,0
+LIM,0
+LK Illiakal re,0
+LK illiakal li,0
+LK praesacral,0
+LK praevertebral 45Gy,0
+LLat_In_Vivo_PT,0
+LNS,0
+LNS1,0
+LNS2,0
+LN_CT3,0
+LNs,0
+LNs2,0
+LPO_In_Vivo_PT,0
+LR_tbCTVp1,0
+LR_tbCTVp1_xx,0
+LR_tbGTVp1,0
+LT Fem Head,0
+LT LAT_In_Vivo_PT,0
+Large Bowel,0
+Large Bowel Opt,0
+Large Bowel noPT,0
+Large bowel opt,0
+Large bowell,0
+LargeBowel,0
+LaserOrigin,0
+Lecho,0
+Left Fem Liam,0
+Left hip prosthesis,0
+Left prosthetic hip,0
+Lg_bowel,0
+Li Femur,0
+Liver,0
+Lnn,0
+Lnn_opt,0
+Lt Art Hip,0
+Lt HOF,0
+Lt Hip,0
+Lt Hip prosthesis,0
+Lt cup,0
+Lt head,0
+Lt stem,0
+Lymph Nodes,0
+Lymph nodes,0
+Lymph nodes2,0
+M F,0
+M1,0
+M2,0
+M3,0
+M4,0
+MARKERS F,0
+MARKERS FIDUCI,0
+MARKUP-PTVA4,0
+MARKUP_PTV,0
+MARKUP_PTV NODE,0
+MARKUP_PTV66,0
+MARKUP_PTV80,0
+MARKUP_PTVA,0
+MARKUP_PTVA 1,0
+MARKUP_PTVA adj,0
+MARKUP_PTVA orig,0
+MARKUP_PTVA1,0
+MARKUP_PTVB,0
+MARKUP_PTVN,0
+MAX,0
+MDC,0
+MESORECTO,0
+MF,0
+MIDOLLO CAUDA,0
+MR11_node,0
+MR8_nodes,0
+MRsb,0
+Mammella dx,0
+Mammella sx,0
+Marker,0
+Marker 1,0
+Marker 2,0
+Marker 3,0
+Marker 4,0
+Marker Fiducia,0
+Marker1,0
+Marker2,0
+Marker3,0
+Marker4,0
+Markers,0
+Markup PTV 59.2,0
+Markup PTV66.6,0
+Markup PTV74,0
+Markup PTVA,0
+Markup PTVA3mm,0
+Markup PTVN,0
+Markup_PTVA,0
+Markup_PTVN,0
+Match points,0
+Medula,0
+Mesorectum,0
+Metaal_Heup_Li,0
+Metaal_Heup_Re,0
+Metalen heupkop,0
+NO 60 HERE,0
+NODAL BOOST,0
+NODE,0
+NODE BOOST,0
+NODE PTV,0
+NODES,0
+NODES PTV,0
+NS_ Blaas_inPTV1,0
+NS_ Darm_inPTV1,0
+NS_100%_inPTV1,0
+NS_65.8 Gy,0
+NS_65.8Gy_inPTV2,0
+NS_95%_exPTV1,0
+NS_Avoid,0
+NS_Avoid2,0
+NS_Bl_inPTV2,0
+NS_BowelBag<5400,0
+NS_BowelBag<5800,0
+NS_BowelBag<6800,0
+NS_Bowelbag,0
+NS_Control,0
+NS_D62.51_ex3,0
+NS_Darm_exPTV1,0
+NS_Densiteit,0
+NS_Fiducial1,0
+NS_Fiducial2,0
+NS_Fiducial3,0
+NS_Fiducial4,0
+NS_GTV_Crop_rect,0
+NS_Hulp,0
+NS_Hulp<95%P1,0
+NS_Hulp>107%P1,0
+NS_Hulp>107%P2,0
+NS_Metalen Heup,0
+NS_PTV2-Bl,0
+NS_PTV70_05 mm,0
+NS_Prothese_ex3,0
+NS_Ring,0
+NS_Ring1,0
+NS_Scatter,0
+NS_Sigmoid_inPTV,0
+NS_bowelbag,0
+NS_densiteit,0
+NS_dunne darm,0
+NS_gaten_D62.51,0
+NS_hulp,0
+NS_hulp1,0
+NS_hulp2,0
+NS_hulp3,0
+NS_hulp62.51Gy,0
+NS_hulp62.51_ex3,0
+NS_hulp<95%P1,0
+NS_hulp>107%P1,0
+NS_hulp>107%P2,0
+NS_hulpPTV2,0
+NS_hulpctv,0
+NS_lucht,0
+NS_sigmoid,0
+New,0
+New MUP PTVA,0
+NewCTV,0
+Nodal CTV,0
+Nodal PTV,0
+Node + 5mm,0
+Nodes,0
+Nodes CTV,0
+Nodes Edited,0
+Nodes PTV,0
+Nodes sv,0
+Nodes.,0
+Nodes1,0
+Nodes2,0
+OAR,0
+OPT Avoid 0.5cm,0
+OPT Avoid 1cm,0
+OPT BOOST,0
+OPT BST PTV,0
+OPT BST PTV2,0
+OPT Bladd v2,0
+OPT Bowel,0
+OPT Bowel&PTVA,0
+OPT Bst PTV3,0
+OPT Bst PTV66,0
+OPT Bst PTVA,0
+OPT Bst PTVA90,0
+OPT Bst PTVB,0
+OPT Bst PTVN,0
+OPT Dose limit,0
+OPT Hernia+1cm,0
+OPT Lt Hip,0
+OPT PTV66,0
+OPT PTVA,0
+OPT PTVA BST,0
+OPT PTVA sw,0
+OPT PTVN Bst3,0
+OPT Rect&PTVA,0
+OPT Rect&PTVB,0
+OPT Rt Hip,0
+OPT Water,0
+OPT boost2,0
+OPT limit 2,0
+OPT limit2,0
+OPT limit3,0
+OPT-PTVA2,0
+OPTPTVA3mm,0
+OPTPTVB3mm,0
+OPT_60GY,0
+OPT_64% - Bowel,0
+OPT_95% Spillage,0
+OPT_95Gy_CTRL,0
+OPT_95_CTRL,0
+OPT_95_Control,0
+OPT_Artefact,0
+OPT_Artifact,0
+OPT_BLADDER,0
+OPT_BLADDERPTVN,0
+OPT_BOWEL,0
+OPT_BOWEL_PTVA,0
+OPT_Blad4,0
+OPT_Bladder,0
+OPT_Bowel,0
+OPT_Bowel + PTVA,0
+OPT_Bowel PTVA,0
+OPT_Bowel PTVB,0
+OPT_Bowel in PTV,0
+OPT_Bowel nd,0
+OPT_Bowel&PTVA,0
+OPT_Bowel&PTVB,0
+OPT_Bowel+65gy,0
+OPT_Bowel4,0
+OPT_Dose 80[%],0
+OPT_HOTSpillage,0
+OPT_Hernia,0
+OPT_Hip Repl.,0
+OPT_Hot Spot,0
+OPT_Hot Spot1,0
+OPT_Hot Spot2,0
+OPT_HotSpill,0
+OPT_HotSpot,0
+OPT_Hotpsot,0
+OPT_Hotspillage,0
+OPT_NBst,0
+OPT_Node Boost,0
+OPT_PTV,0
+OPT_PTV -95%,0
+OPT_PTV 74,0
+OPT_PTV A,0
+OPT_PTV A1,0
+OPT_PTV B,0
+OPT_PTV B1,0
+OPT_PTV BST,0
+OPT_PTV Bowel,0
+OPT_PTV Hot,0
+OPT_PTV Rectum,0
+OPT_PTV66,0
+OPT_PTV66.6,0
+OPT_PTV66Bst,0
+OPT_PTV80,0
+OPT_PTVA,0
+OPT_PTVA & OARs,0
+OPT_PTVA - 90%,0
+OPT_PTVA - 95%,0
+OPT_PTVA - RBnd,0
+OPT_PTVA 80,0
+OPT_PTVA 90,0
+OPT_PTVA BOWEL,0
+OPT_PTVA BST,0
+OPT_PTVA Bladder,0
+OPT_PTVA Boost,0
+OPT_PTVA Bowel,0
+OPT_PTVA BowlRec,0
+OPT_PTVA Bst,0
+OPT_PTVA RECTUM,0
+OPT_PTVA Rect,0
+OPT_PTVA Rectum,0
+OPT_PTVA boost,0
+OPT_PTVA bst,0
+OPT_PTVA&Rect,0
+OPT_PTVA+BOWEL,0
+OPT_PTVA+Bowel,0
+OPT_PTVA4,0
+OPT_PTVABst,0
+OPT_PTVABst1A,0
+OPT_PTVARing,0
+OPT_PTVARingBst,0
+OPT_PTVA_BST,0
+OPT_PTVA_BST2,0
+OPT_PTVA_BST3,0
+OPT_PTVA_Boost,0
+OPT_PTVA_Bst,0
+OPT_PTVA_CONTROL,0
+OPT_PTVA_RING,0
+OPT_PTVA_Ring,0
+OPT_PTVA_Ring nd,0
+OPT_PTVAch,0
+OPT_PTVB,0
+OPT_PTVB & OARs,0
+OPT_PTVB + node,0
+OPT_PTVB - RBnd,0
+OPT_PTVB BOWEL,0
+OPT_PTVB Bow,0
+OPT_PTVB Bowel,0
+OPT_PTVB BowlRec,0
+OPT_PTVB RECTUM,0
+OPT_PTVB Rect,0
+OPT_PTVB Rectum,0
+OPT_PTVB hot,0
+OPT_PTVB nd,0
+OPT_PTVB&Rect,0
+OPT_PTVB+BOWEL,0
+OPT_PTVB1,0
+OPT_PTVB2,0
+OPT_PTVB4,0
+OPT_PTVBBst,0
+OPT_PTVB_BST,0
+OPT_PTVB_CONTROL,0
+OPT_PTVB_CTRL,0
+OPT_PTVB_Con,0
+OPT_PTVBspillage,0
+OPT_PTVBst,0
+OPT_PTVN,0
+OPT_PTVN - 64%,0
+OPT_PTVN - 72%,0
+OPT_PTVN - 77.7%,0
+OPT_PTVN - 81%,0
+OPT_PTVN BOOST,0
+OPT_PTVN BST,0
+OPT_PTVN Boost,0
+OPT_PTVN Bowel,0
+OPT_PTVN Bst,0
+OPT_PTVN N BST,0
+OPT_PTVN NODE,0
+OPT_PTVN NodeBst,0
+OPT_PTVN Rectum,0
+OPT_PTVN boost,0
+OPT_PTVN bst,0
+OPT_PTVNBst,0
+OPT_PTVNBstKC,0
+OPT_PTVNODE,0
+OPT_PTVN_BST,0
+OPT_PTVN_BST2,0
+OPT_PTVN_Boost,0
+OPT_PTVN_Bst,0
+OPT_PTVN_CONTROL,0
+OPT_PTVN_CTRL2,0
+OPT_PTVNode,0
+OPT_PTVNode BST,0
+OPT_PTV_Control,0
+OPT_PTVn BST,0
+OPT_PinPRV,0
+OPT_RECTUM,0
+OPT_Rect in PTVA,0
+OPT_Rect in PTVB,0
+OPT_Rect4,0
+OPT_RectPTVA,0
+OPT_RectPTVB,0
+OPT_Rectum,0
+OPT_Rectum nd,0
+OPT_Rectum+PTVA,0
+OPT_WATER,0
+OPT_Water,0
+OPT__PTVA - 90%,0
+OPT_bowel PTV80,0
+OPT_overlap 59.2,0
+OPT_overlap6cc,0
+OPT_water,0
+OPY_PTVA1,0
+OR Bulbus,0
+ORIGIN,0
+OS-Kopf L,0
+OS-Kopf R,0
+OS-Kopf+Hals L,0
+OS-Kopf+Hals R,0
+OTP PTVA RING,0
+OTP PTVB,0
+OTP_Rectspare,0
+OTP_Water,0
+OV-VESSIE-2,0
+Opt_Bowel,0
+Opt_Bowel in PTV,0
+Opt_PTVA - 90%,0
+Opt_PTVA_RING 66,0
+Opt_PTVA_Ring,0
+Opt_PTVB,0
+Opt_PTVB 74gy,0
+Opt_PTVN - 64%,0
+Opt_PTVN - 72%,0
+Opt_PTVN bst,0
+Opt_PTVSV - 80%,0
+Opt_PTVSV 59.2gy,0
+Opt_bowel 64%,0
+Organ,0
+Orig MARKUP_PTVA,0
+Orig OPT_PTVA,0
+Orig OPT_Rectum,0
+Orig PTVA_Ring,0
+Origin,0
+Original PTVA,0
+Original PTVB,0
+Original Prostat,0
+Ovary L,0
+Ovary R,0
+P E VS,0
+P+SB,0
+P+SB ab 50Gy,0
+P+SB bis 50Gy,0
+P+SB_1,0
+P+V,0
+P+v,0
+P+vs,0
+P-Loge,0
+P-loge,0
+P-loge Boost,0
+P.loge,0
+P.loge Boost,0
+P.loge integr Boost,0
+P.loge integr Boost_1,0
+P.loge_neu,0
+PAtient,0
+PD,0
+PELVI_noN+_PROS,0
+PET post LKs,0
+PLO_In_Vivo_PT,0
+POI_1,0
+POI_2,0
+POI_3,0
+PR & SV PTV,0
+PR SV Opt,0
+PROSTATE,0
+PROTESI SX,0
+PRO_In_Vivo_PT,0
+PRV  MIDOLLO CAU,0
+PRV Beacons,0
+PRV CAUDA,0
+PRV CORD,0
+PRV MID CAUDA,0
+PRV MIDOLLO CAUD,0
+PRV URETERE DX,0
+PRV URETERE SX,0
+PRV_SpinCanal,0
+PRV_Transpl_Nier,0
+PTGGTVintRetto,0
+PTV,0
+PTV  CTV VS,0
+PTV  DIL,0
+PTV  GTV,0
+PTV  N 70,0
+PTV  P,0
+PTV  PROSTATA,0
+PTV  RECIDIVA,0
+PTV  VS,0
+PTV +0.7,0
+PTV +5mm,0
+PTV +7mm,0
+PTV 1,0
+PTV 1 Pelvis,0
+PTV 1 cover,0
+PTV 2,0
+PTV 2 LOGE,0
+PTV 2 P+VS,0
+PTV 24 Gy.,0
+PTV 28fz,0
+PTV 3 P,0
+PTV 3 prostate,0
+PTV 4,0
+PTV 45,0
+PTV 45 Eval,0
+PTV 45 Opt,0
+PTV 45 Total,0
+PTV 45 opt,0
+PTV 45 ovlp,0
+PTV 50,0
+PTV 50 Gy.,0
+PTV 50 exp,0
+PTV 52.8,0
+PTV 52.8 crop,0
+PTV 55.5,0
+PTV 56,0
+PTV 56 crop,0
+PTV 56-PTV77_05,0
+PTV 59.4 Eval,0
+PTV 59.4 Opt,0
+PTV 66,0
+PTV 66 exp,0
+PTV 66+7 mm,0
+PTV 66+7mm,0
+PTV 66.6_ring,0
+"PTV 68,4",0
+PTV 70,0
+PTV 70+5 mm,0
+PTV 70+7 mm,0
+PTV 70.2,0
+PTV 7020 opt,0
+PTV 7020 ovlp,0
+PTV 70Gy,0
+PTV 74,0
+PTV 74+7 mm,0
+PTV 76 Gy F.,0
+PTV 77,0
+PTV 77+5mm,0
+PTV 77+7 mm,0
+PTV 77+7mm,0
+PTV 77Gy*,0
+PTV 77_05,0
+PTV 81,0
+PTV 81 Eval,0
+PTV A,0
+PTV B,0
+PTV BED,0
+PTV BOOST,0
+PTV BST 71.6Gy,0
+PTV Becken,0
+PTV Boost,0
+PTV CD,0
+PTV CD Opt,0
+PTV CD_ opt,0
+PTV CD_ovlp,0
+PTV CTV,0
+PTV CTV N,0
+PTV CTV N +,0
+PTV CTV N exp,0
+PTV CTV Nesp,0
+PTV CTV Nexp,0
+PTV CTV P,0
+PTV CTV P VS,0
+PTV CTV P exp,0
+PTV CTV P+VS,0
+PTV CTV VS,0
+PTV CTV VS EXP,0
+PTV CTV VS esp,0
+PTV CTV VS exp,0
+PTV CTV VSesp,0
+PTV CTV VSexp,0
+PTV CTV esp,0
+PTV CTV exp,0
+PTV CTV p+VS exp,0
+PTV CTV+,0
+PTV CTVesp,0
+PTV F.,0
+PTV GTV,0
+PTV GTV 1,0
+PTV GTV EXP,0
+PTV GTV P VS,0
+PTV GTV VSesp,0
+PTV GTV exp,0
+PTV GTV_exp,0
+PTV GTVesp,0
+PTV GTVesp2,0
+PTV GTVexp,0
+PTV HAUT,0
+PTV Klieren 66Gy,0
+PTV LK,0
+PTV LK klein,0
+PTV LNF +,0
+PTV LOGGIA,0
+PTV LOGGIA BOOST,0
+PTV LOGGIA PROST,0
+PTV Loge,0
+PTV N,0
+PTV N PET +,0
+PTV N exp,0
+PTV N exp up,0
+PTV N opt,0
+PTV N ovlp,0
+PTV N+,0
+PTV N+ PET,0
+PTV NODE BST,0
+PTV N_exp,0
+PTV Nesp,0
+PTV Nexp,0
+PTV OPT,0
+PTV Opt,0
+PTV P,0
+PTV P+SB,0
+PTV P+VS,0
+PTV P+VS -1,0
+PTV P+VS -1 exp,0
+PTV P+VS exp,0
+PTV P-Loge,0
+PTV P-rettoevesc,0
+PTV PELVI,0
+PTV PELVIOUT,0
+PTV PELVIS,0
+PTV PET post LKs,0
+PTV PR SV opt,0
+PTV PR SV ovlp,0
+PTV PR+SV,0
+PTV PROSTATA,0
+PTV PROSTATA + V,0
+PTV PRSV,0
+PTV Pelvis,0
+PTV Pelvis crop,0
+PTV Ploge,0
+PTV Prostaat,0
+PTV Prostaat 7mm,0
+PTV Prostaat 8mm,0
+PTV Prostaat+ZB,0
+PTV Prostaatloge,0
+PTV Prostata,0
+PTV Prostataloge,0
+PTV Prostate,0
+PTV Prostloge,0
+PTV Prostrest+zb,0
+PTV RECIDIVA,0
+PTV Ring,0
+PTV Ring_K,0
+PTV SCOPE,0
+PTV TERZO PROSS,0
+PTV TOT,0
+PTV TOTexp,0
+PTV Totaal,0
+PTV Total,0
+PTV VESC OUT,0
+PTV VESCICOLE,0
+PTV VESCICOLE_,0
+PTV VS,0
+PTV VS exp,0
+PTV VS_exp,0
+PTV VSesp,0
+PTV VSesp2,0
+PTV VSexp,0
+PTV ZB,0
+PTV ZB 5mm,0
+PTV ZB crop,0
+PTV Zaadblaas,0
+PTV boost,0
+PTV boost exp,0
+PTV cd opt,0
+PTV cd ovlp,0
+PTV cover,0
+PTV haut,0
+PTV klier,0
+PTV loge,0
+PTV loggia,0
+PTV loggia Esp,0
+PTV loggia P,0
+PTV loggia P exp,0
+PTV loggia VS,0
+PTV loggia boost rid,0
+PTV loggia exp,0
+PTV loggia prost,0
+PTV loggia small,0
+PTV loggiaEsp,0
+PTV marge,0
+PTV opt,0
+PTV opt1,0
+PTV opt2,0
+PTV ovlp,0
+PTV ovlp1,0
+PTV ovlp2,0
+PTV p+v,0
+PTV pelvis,0
+PTV prostaat,0
+PTV prostaatloge,0
+PTV prostata,0
+PTV prostata exp,0
+PTV prostloge,0
+PTV ring,0
+PTV tot,0
+PTV tot exp,0
+PTV totaal,0
+PTV vs OUT,0
+PTV'GTV,0
+PTV+,0
+PTV+0.7,0
+PTV+1cm,0
+PTV-55.8,0
+PTV-GTV,0
+PTV-GTV exp,0
+PTV-GTV exp2,0
+PTV-GTVesp,0
+PTV-GTVexp,0
+PTV-LA,0
+PTV-LA-boost,0
+PTV-LYMPH,0
+PTV-N+,0
+PTV-Nesp2,0
+PTV-Nexp,0
+PTV-SIB,0
+PTV-VESSIE,0
+PTV-VSexp,0
+PTV-loge,0
+PTV-n,0
+PTV-n-b,0
+PTV-n-boost,0
+PTV-n-c,0
+PTV1,0
+PTV1 66,0
+PTV1 Boost,0
+PTV1 OK,0
+PTV1 P+vs,0
+PTV1 SEUL,0
+PTV1 haut,0
+PTV1 opt,0
+PTV1 ovlp,0
+PTV1 pelvis,0
+PTV1 seul,0
+PTV1 seul_opt,0
+PTV1-2,0
+PTV1-2-OAR's,0
+PTV1-2-R+A+B,0
+PTV1-2-R+A+Bl,0
+PTV1-2-RAB,0
+PTV1-2-Sigm,0
+PTV1-2_-RAB,0
+PTV1-2_3,0
+PTV1-OAR,0
+PTV1-PTV2,0
+PTV1-PTV2m,0
+PTV1-PTV2m-PTVBm,0
+PTV1-PTV3,0
+PTV1-R+A+B,0
+PTV1-R+A+Bl,0
+PTV1-RAB,0
+PTV1-loge,0
+PTV1/66,0
+PTV1_46,0
+PTV1_LIM,0
+PTV1_ok,0
+PTV1b,0
+PTV1b-PTV2b-RAB,0
+PTV1c-2-RABL,0
+PTV1concessie,0
+PTV1exp,0
+PTV1m,0
+PTV1opt,0
+PTV1totEXP,0
+PTV2,0
+PTV2 /70,0
+PTV2 70,0
+PTV2 LIM,0
+PTV2 OK,0
+PTV2 P+VS,0
+PTV2 excess dose,0
+PTV2 opt,0
+PTV2 ovlp,0
+PTV2+1,0
+PTV2+3,0
+PTV2+3-R+A+B,0
+PTV2-(rct+ ves),0
+PTV2-(rct+ves),0
+PTV2-3-R+A+B,0
+PTV2-3-RAB-65.8G,0
+PTV2-PTV3,0
+PTV2-R+A+B,0
+PTV2-RAB,0
+PTV2-dig,0
+PTV2-rct,0
+PTV2-rct m,0
+PTV2-rect,0
+PTV2-rect m,0
+PTV2-rect-vessie,0
+PTV2-rectm,0
+PTV2-rectum,0
+PTV2/70,0
+PTV2_60,0
+PTV2b,0
+PTV2exp,0
+PTV2m2,0
+PTV2totEXP,0
+PTV3,0
+PTV3 P,0
+PTV3-PTV2m,0
+PTV3_66,0
+PTV3_LIM,0
+PTV3_LIM_COPY,0
+PTV3mmEXP,0
+PTV4,0
+PTV44,0
+PTV45,0
+PTV45 opt,0
+PTV48-PTV56m,0
+PTV48seul,0
+PTV50,0
+PTV50 exp,0
+PTV50+,0
+PTV50-PTV60m,0
+PTV50.4_PC,0
+PTV50exp,0
+PTV51,0
+PTV54,0
+PTV55,0
+PTV56,0
+PTV56.0_PC_SIB,0
+PTV56_CropPTV77_,0
+PTV59.4_PC,0
+PTV59.4_PC-SIB,0
+PTV60,0
+PTV60+,0
+PTV60-PTV66m,0
+PTV60exp,0
+PTV64+,0
+PTV66,0
+PTV66 exp,0
+PTV66 inRetto,0
+PTV66 nonRetto,0
+PTV66+,0
+PTV66-PTV70m,0
+PTV66.0_PC_Bst,0
+PTV66esp,0
+PTV66exp,0
+PTV6mmEXP,0
+PTV70,0
+PTV70-PTV66m,0
+PTV7020,0
+PTV74,0
+PTV76.23_PC_SiB,0
+PTV77+0.3,0
+PTV77-Rectum03,0
+PTV77-Rectum_03,0
+PTV78esp,0
+PTV80,0
+PTV90,0
+PTVA,0
+PTVA 80,0
+PTVA 90,0
+PTVA PLUS BOWEL,0
+PTVA adj 1406201,0
+PTVA+Bowel,0
+PTVARing-OPTWate,0
+PTVA_RING,0
+PTVA_Ring,0
+PTVA_Ring 66.6gy,0
+PTVA_Ring nd,0
+PTVA_Ring4,0
+PTVB,0
+PTVB (Bowel inc),0
+PTVB + Node,0
+PTVB 74gy,0
+PTVB adj 1406201,0
+PTVB nd,0
+PTVB orig,0
+PTVB original,0
+PTVB+rectum,0
+PTVB4,0
+PTVB_Check,0
+PTVCTV,0
+PTVCTV+,0
+PTVCTVNexp,0
+PTVCTVSexp,0
+PTVCTVVSexp,0
+PTVCTVesp,0
+PTVCTVexp,0
+PTVCTVintRetto,0
+PTVCTVopt,0
+PTVGTV+,0
+PTVGTV+CTVVS,0
+PTVGTVCTVVSexp,0
+PTVGTVVS,0
+PTVGTVVSexp,0
+PTVGTVexp,0
+PTVGTVintRetto,0
+PTVGTVmeno retto,0
+PTVGTVnew,0
+PTVGTVopt,0
+PTVGTVvs meno re,0
+PTVGTVvs+,0
+PTVGTVvsmeno ret,0
+PTVGopt,0
+PTVKlieren66Gy1,0
+PTVKlieren66Gy2,0
+PTVN,0
+PTVN BOOST,0
+PTVN NODAL BST,0
+PTVN exp,0
+PTVN nd,0
+PTVN sv,0
+PTVNODE,0
+PTVN_BST,0
+PTVNesp,0
+PTVNexp,0
+PTVNode,0
+PTVNopt,0
+PTVPexp,0
+PTVSV 59.2gy,0
+PTVTOT,0
+PTVTOTOPT,0
+PTVVSexp,0
+PTVVSopt,0
+PTVVopt,0
+PTV_05_5565,0
+PTV_05_5600,0
+PTV_07_7700,0
+PTV_1,0
+PTV_10_5556,0
+PTV_10_7700,0
+PTV_45,0
+PTV_5565_only,0
+PTV_56-PTV_77_05,0
+PTV_70.2,0
+PTV_70.2 Eval,0
+PTV_7020,0
+PTV_77-Rectum_03,0
+PTV_7700_03,0
+PTV_7700_05,0
+PTV_7700_Ring_01,0
+PTV_All,0
+PTV_All_caudaal_links,0
+PTV_All_caudaal_rechts,0
+PTV_All_craniaal,0
+PTV_All_dosana_20.00_45.00,0
+PTV_All_dosana_20.00_48.00,0
+PTV_All_opt,0
+PTV_CD,0
+PTV_COPY,0
+PTV_F1,0
+PTV_F1exp,0
+PTV_F2exp,0
+PTV_FASE1,0
+PTV_GTV_All,0
+PTV_GTV_Lnn1,0
+PTV_GTV_Lnn1+2,0
+PTV_GTV_Lnn1+3,0
+PTV_GTV_Lnn2,0
+PTV_GTV_Lnn3,0
+PTV_GTV_Lnn4,0
+PTV_GTV_Lnn_All,0
+PTV_GTV_all,0
+PTV_GTV_exp,0
+PTV_GTVexp,0
+PTV_GTVnsum_5,0
+PTV_IN,0
+PTV_InRetto,0
+PTV_Klier,0
+PTV_LN,0
+PTV_Lnn,0
+PTV_Lnn_caudaal,0
+PTV_Lnn_caudaal_li,0
+PTV_Lnn_caudaal_re,0
+PTV_Lnn_craniaal,0
+PTV_Lnn_dosana_10.00_40.00,0
+PTV_Lnn_dosana_30.00_45.00,0
+PTV_Lnn_dosana_40.00_48.00,0
+PTV_Lnn_dosana_52.00_60.00,0
+PTV_Lnn_opt,0
+PTV_Lnn_opt_dosana_55.00_75.00,0
+PTV_Lnn_opt_dosana_60.00_80.00,0
+PTV_Lnn_opt_dosana_65.00_75.00,0
+PTV_Lnn_skew,0
+PTV_NO Retto,0
+PTV_NODE BST,0
+PTV_N_exp,0
+PTV_Nexp,0
+PTV_OPT,0
+PTV_PROSTATE,0
+PTV_Paro-aort,0
+PTV_Prostate,0
+PTV_Prostate+SV,0
+PTV_Ring,0
+PTV_SUM,0
+PTV_SV,0
+PTV_Totaal,0
+PTV_Total,0
+PTV_VS_GTV,0
+PTV_VS_GTV_exp,0
+PTV_VSexp,0
+PTV_boost,0
+PTV_boost_opt,0
+PTV_dosana_40.00_50.00,0
+PTV_dosana_68.00_70.00,0
+PTV_exp1,0
+PTV_exp_1.0,0
+PTV_exp_1.5,0
+PTV_f1,0
+PTV_in,0
+PTV_meta,0
+PTV_nodes,0
+PTV_opt,0
+PTV_opt_dosana_68.50_70.00,0
+PTV_opt_dosana_74.00_77.00,0
+PTV_optim_48Gy,0
+PTV_optim_80Gy,0
+PTV_out,0
+PTV_ovlp,0
+PTV_prostata_exp,0
+PTV_prostate,0
+PTV_rim_48Gy,0
+PTV_skew,0
+PTV_sv,0
+PTV_tot_exp,0
+PTV_total,0
+PTV_vs_exp,0
+PTVboost,0
+PTVc,0
+PTVc-3-R+A+B,0
+PTVeVS,0
+PTVesp,0
+PTVesp inRetto,0
+PTVesp-retto,0
+PTVesp2,0
+PTVexp,0
+PTVf1exp,0
+PTVf2,0
+PTVf2exp,0
+PTVf3exp,0
+PTVgOpt,0
+PTVgg,0
+PTVhaut,0
+PTVinRetto,0
+PTVinVescica,0
+PTVloge_cor77Gy,0
+PTVloggiaEXP,0
+PTVlow,0
+PTVmeno retto,0
+PTVmenoRetto,0
+PTVmetaal,0
+PTVn,0
+PTVn 51,0
+PTVn-PTVp_Rng_05,0
+PTVn/51,0
+PTVn51,0
+PTVn_07_7000,0
+PTVn_10_5600,0
+PTVn_elec_10,0
+PTVopt,0
+PTVoverlap59.2,0
+PTVp-Rectum_03,0
+PTVp1_pros_as,0
+PTVp1_pros_as2,0
+PTVp1_vs_as,0
+PTVp1_vs_as2,0
+PTVp_10_7000,0
+PTVp_Ring_05,0
+PTVprostEXP,0
+PTVprostata3mm,0
+PTVprostata6mm,0
+PTVprostataEXP,0
+PTVripian,0
+PTVseul,0
+PTVt,0
+PTVtot,0
+PTVtot+,0
+PTVtot50+,0
+PTVtotEXP,0
+PTVtotExp,0
+PTVvs,0
+PTVvs+,0
+PTVvsnew,0
+PTVvx,0
+PUSH HERE,0
+Pancreas,0
+Parametrium,0
+Patient,0
+Patient Outline,0
+Pelvic LN,0
+Penile Bulb,0
+Penile bulb,0
+PenileBulb,0
+Penis bulbus,0
+Perineum,0
+Pin,0
+Polmone dx,0
+Polmone sx,0
+Polmone-LT,0
+Polmone-RT,0
+Polmoni,0
+Post_In_Vivo_PT,0
+Presacral,0
+Prev Prostate,0
+Prost cropped,0
+Prostata,0
+Prostata CT1,0
+Prostata MR,0
+Prostata MRT,0
+Prostata+ 1/3V,0
+Prostataloge,0
+Prostate,0
+Prostate (new),0
+Prostate + SV,0
+Prostate BED,0
+Prostate Bed,0
+Prostate CT,0
+Prostate PTV,0
+Prostate SV,0
+Prostate bed,0
+Prostate new,0
+Prostate+SV,0
+"Prostate, interp",0
+Prostate1,0
+ProstateCD,0
+Prostate_DS,0
+Prostate_sb,0
+Prostatebed,0
+Prosthesis,0
+Prot,0
+ProtF3,0
+Prot_Intestino,0
+Protez,0
+Protezione,0
+Prothese,0
+Prothese_Li,0
+Prothese_Re,0
+Prothese_re,0
+Pulmon D,0
+Pulmon I,0
+R FHN,0
+R Feam Head,0
+R Fem Head,0
+R Femoral Head,0
+R cup,0
+R femoral head,0
+R femur,0
+R hip prosthesis,0
+R hip replacement,0
+R prosthesis head,0
+R prosthesis shaft,0
+R+A,0
+R+A+B,0
+R+A+B fr18,0
+R+A_inPTV1,0
+R+A_inPTV1c,0
+R+A_inPTV1fr18,0
+R+A_inPTV2,0
+R+A_inPTVc,0
+R+Afr18,0
+RAO_In_Vivo_PT,0
+RECTO 1,0
+RECTO TAC 2,0
+RECTOPT2,0
+RECTUM,0
+RECTUM IN PTVA,0
+RECTUM IN PTVB,0
+RECTUMOPT,0
+RECTUM_IN,0
+RETTO,0
+RETTO sup,0
+RETTOin,0
+RFH,0
+RHOF,0
+RHOF 1,0
+RHOF LW,0
+RIGHT,0
+RIND,0
+RING,0
+RING 66,0
+RING 80 2,0
+RING HT,0
+ROI_1,0
+ROI_10,0
+ROI_11,0
+ROI_12,0
+ROI_13,0
+ROI_14,0
+ROI_2,0
+ROI_3,0
+ROI_4,0
+ROI_5,0
+ROI_6,0
+ROI_7,0
+ROI_8,0
+ROI_9,0
+RPO_In_Vivo_PT,0
+RT Fem Head,0
+R_inPTV2,0
+Rails,0
+Re Femur,0
+Rec-PTV1,0
+Rect_exPTV1_3,0
+Rect_exPTV1fr18,0
+Rect_inPTV1,0
+Rectal OL,0
+Rectal Opt,0
+Rectal Wall,0
+Rectal Wall Opt1,0
+Rectal Wall opt2,0
+Rectal avoid,0
+Rectal opt,0
+RectalWall,0
+Recto,0
+Recto  1,0
+Recto  tc2,0
+Recto 1,0
+Recto 2,0
+Recto TAC1,0
+Recto TC 2,0
+Recto TC1,0
+Recto TC2,0
+Recto TC3,0
+Recto inf,0
+Recto lleno,0
+Recto tac 1,0
+Recto tac 2,0
+Recto tac2,0
+Recto tc 1,0
+Recto tc 2,0
+Recto tc1,0
+Recto tc2,0
+Recto vac,0
+Recto vacio,0
+Recto vacío,0
+Rectolleno,0
+Rectovacio,0
+Rectum,0
+Rectum (ant.),0
+Rectum (ext.),0
+Rectum (int.),0
+Rectum (post.),0
+Rectum 2,0
+Rectum CT,0
+Rectum InPTV,0
+Rectum Liam,0
+Rectum Mark,0
+Rectum NOT PTV,0
+Rectum NoPTV,0
+Rectum OL,0
+Rectum Opt,0
+Rectum Opt2,0
+Rectum Wall,0
+Rectum ant bal,0
+Rectum avoid1,0
+Rectum avoid2,0
+Rectum ext bal,0
+Rectum fr18,0
+Rectum in PTV,0
+Rectum inPTV,0
+Rectum niet PTV,0
+Rectum noPTV,0
+Rectum not PTV,0
+Rectum opt,0
+Rectum opt2,0
+Rectum postbal,0
+Rectum+AnalCanal,0
+Rectum+Bowel,0
+Rectum+analcanal,0
+Rectum-PTV,0
+Rectum-PTV77,0
+Rectum-PTV_7700,0
+Rectum-PTVp,0
+Rectum-exPTV1c,0
+Rectum1,0
+Rectum2,0
+RectumAnalC-PTV,0
+RectumAnalCInPTV,0
+RectumInPTV,0
+RectumInPTV_7700,0
+RectumInPTVp,0
+RectumNietPTV,0
+RectumOutPTV,0
+Rectum_OUT,0
+Rectum_opt,0
+Rectum_opt2,0
+Ref Point,0
+Reference point,0
+Rektum,0
+Rektum MRT,0
+Rektum dorsal,0
+Rektum union,0
+Rektum1,0
+Rektum2,0
+Retto,0
+Retto NonPTV66,0
+Retto nonPTVesp,0
+Retto sup,0
+RettoNoPTV,0
+RettoNonPTV,0
+RettoOPT,0
+Right Fem Liam,0
+Right prosthetic hip,0
+Ring haut,0
+Rlat_In_Vivo_PT,0
+RrectumAnalCanal,0
+Rt Hip,0
+Rt head,0
+Rt stem,0
+SB OL,0
+SB OPT,0
+SB Opt,0
+SB avoid,0
+SB union,0
+SBinPTV+0.3,0
+SBinPTV70+5,0
+SBowel Avoid,0
+SEEDS,0
+SEEDS ARTIFACT,0
+SEEDS+3mm,0
+SEEDS+MARGIN,0
+SIB Klier MR,0
+SIB N+ (CT),0
+SIGMA,0
+SIGMA-COLON,0
+SIGMACOLON,0
+SIGMOID,0
+SKIN,0
+SV,0
+SV PTV,0
+SV expansion,0
+SVs,0
+SVs_sb,0
+Sacrum,0
+Samenblase,0
+Samenblasen,0
+Samenbläschen,0
+Seed_artifact,0
+Seeds,0
+Seeds + 3mm,0
+Seeds + art,0
+Seeds + artifact,0
+Seeds +3mm,0
+Seeds artifact,0
+Seeds+0.3cm,0
+Seeds+3MM,0
+Seeds+3mm,0
+Sem. Vesicle MRT,0
+Sem. Vesicles CT,0
+Seminal Vesicles,0
+Seminal vesicle,0
+Sig+SmBow,0
+Sig+SmBow inPTV,0
+Sig+SmBow noPTV,0
+Sigma,0
+Sigma-COLON,0
+Sigma-Colon,0
+Sigma-colon,0
+Sigma/Colon,0
+Sigma/colon,0
+SigmaNoPTV,0
+Sigmoid,0
+Skin,0
+Sm_bowel,0
+Small Bowel,0
+Small Bowel*,0
+Small BowelinPTV,0
+Small bowel,0
+Small bowel PTV,0
+Small bowel inPT,0
+Small bowel noPT,0
+Small bowel not,0
+SmallBowel,0
+SmallBowel inPTV,0
+SmallBowel noPTV,0
+SmallBowelInPTV,0
+SmallBowelLoge,0
+SmallBowelNotPTV,0
+SmallBowelOutPTV,0
+SmallBowelPelvis,0
+SmallBowelnotPTV,0
+Small_Bowell,0
+SommaTarget,0
+SpinalCanal,0
+Spleen,0
+Steel charnley Rt hip prosthesis,0
+Steel head Lt hip prosthesis,0
+Stomach,0
+TAFEL_SYN2-3,0
+TAFEL_SYN23,0
+TATOO,0
+TENUE,0
+TEP,0
+TEP li,0
+TEP re,0
+TESTICOLO,0
+TRASPONDITORI,0
+TableOrigin,0
+Target,0
+TargetF2,0
+Targets,0
+TatooLaterali,0
+Tep,0
+Test CTV,0
+Testicolo,0
+Testis L,0
+Testis R,0
+Titanium shaft Lt prosthesis,0
+Tr.A,0
+Tr.B,0
+Tr.C,0
+URETERE DX,0
+URETERE SX,0
+URETRA,0
+Union,0
+Urethra,0
+Urethral Bulb,0
+V.vacia,0
+VESCICA,0
+VESCICAin,0
+VESSELS,0
+VOL,0
+VOL-,0
+VS,0
+VS-pros,0
+VS-pros-COLD,0
+Vagina,0
+Vagina_dist,0
+Vagina_prox,0
+Vasc,0
+Vasc R,0
+Vasc. L,0
+Vejiga,0
+Vejiga llena,0
+Vejiga tc 1,0
+Vejiga tc 2,0
+Vejiga vacia,0
+Vejiga vacía,0
+Vescica,0
+VescicaNoPTV,0
+Vesicula D,0
+Vesicula I,0
+Vesiculas,0
+Vessels,0
+Vessles.,0
+Warm Up,0
+Water,0
+X_PTVA+BOWEL,0
+X_PTVB+BOWEL,0
+Z-OV-vessie,0
+Z-PTV2-PTV3,0
+Z-PTVs,0
+Z-Paroi_rect,0
+Z-ext-PTVs,0
+Z-paroi rectale,0
+Z-paroi rectum,0
+Z-paroi vessie,0
+Z-paroi_vessie,0
+Z-rect_post,0
+Z-rectum post,0
+Z-ring 1,0
+Z-ring 2,0
+Z-ring-PTV1,0
+Z-ring-PTV3,0
+Z-ring_pelvis,0
+ZB U99%,0
+ZV,0
+"ZV -50,4Gy",0
+ZV Becken,0
+"ZV II -56,4Gy",0
+ZV Prostataloge,0
+ZV Prostataloge bis 60/72,0
+ZV integr Boost,0
+ZV integr Boost R1,0
+"ZV until 50,4",0
+ZV2 until 59.4Gy,0
+Z_PTV2-3,0
+Z_Ring Prostate,0
+Z_Ring prostate,0
+Z_Vessiepartiel,0
+Z_opt,0
+Z_opt VS,0
+Z_paroi rectale,0
+Z_paroi_vessie,0
+Z_rectum-PTV,0
+Z_ring pelvis,0
+Z_vessie-PTV,0
+Z_vessie_partiel,0
+Zaadje-1 (Au),0
+Zaadje-2 (Au),0
+Zaadje-3 (Au),0
+Zaadje-4 (Au),0
+Zaadje-5 (Au),0
+aa,0
+acqua,0
+adenopatia,0
+adenopatias,0
+anaal kanaal,0
+anaalkanaal,0
+anal canal,0
+analcanal,0
+ano,0
+ano 1,0
+ano IN 75,0
+ano IN74,0
+ano tc 1,0
+ano tc1,0
+ano tc2,0
+anoIN75.2,0
+anoo,0
+anoretto,0
+ansa,0
+anse IN 54,0
+anse IN54,0
+anse int,0
+anse intestinali,0
+anseIN54.4,0
+ant red,0
+anus fr18,0
+aria,0
+art hip,0
+artefact,0
+artefatto,0
+artifact,0
+artificial hip left,0
+artificial hip right,0
+att,0
+avoid,0
+b,0
+blaas fr18,0
+bladder,0
+bladder OS,0
+bladder Wall,0
+bladder avoid,0
+bladder avoid 2,0
+bladder opt,0
+bladder wall,0
+bladder-PTV,0
+bladder-PTV2,0
+bladder-PTV2_COPY,0
+bladder-full,0
+bladder1 avoid,0
+bladder_dosana_68.00_77.00,0
+bladderin,0
+bladderopt,0
+bladderout,0
+bod1,0
+body,0
+body-4rind,0
+bone_marrow,0
+boolean bowel,0
+boolean lb,0
+boost,0
+boost_gtv_n,0
+boost_n,0
+boostn,0
+bowel,0
+bowel  loop,0
+bowel LG,0
+bowel am,0
+bowel corrected,0
+bowel in PTVA,0
+bowel in PTVN,0
+bowel in ptva,0
+bowel_in_4000cgy,0
+bowelin ptva,0
+broche,0
+bst 2,0
+btv,0
+btv_recidive,0
+bulbe,0
+bulbe_penien,0
+bulbe_pénien,0
+bulbo,0
+bulbo RM,0
+bulbo pen,0
+bulbo penieno,0
+bulbo-PTV,0
+bulboIN,0
+bulbo_exp,0
+cOLON-SIGMA,0
+ca,0
+canal anal,0
+canal anal-ptv1m,0
+canal_anal,0
+canal_anal3,0
+canale anale,0
+canale anale_exp,0
+canale-PTV,0
+canaleanale,0
+cauda,0
+cauda_equina,0
+cauda_equina_dosana_44.00_60.00,0
+cav addom IN54,0
+cav int IN54.4,0
+cavit IN,0
+cavita,0
+cavita IN54,0
+cavita intestina,0
+cavita' intestin,0
+cavitaIN54.4,0
+cavità IN,0
+cdopt2,0
+cid,0
+cig,0
+cold,0
+cold PTV1,0
+colon tc 1,0
+colon tc 2,0
+colon tc 3,0
+colon tc2,0
+colon-sigma,0
+colon1,0
+cont ext,0
+cont ext-2,0
+corps_caverneux,0
+cretes,0
+cretes-ptv1m,0
+ctv,0
+ctv VS,0
+ctv modif 13a,0
+ctv modif 28a,0
+ctv modif 3a,0
+ctv n,0
+ctv n+0.7,0
+ctv n+7,0
+ctv n0.7,0
+ctv nodes,0
+ctv nodes2,0
+ctv vx,0
+ctv+0.7,0
+ctv1,0
+ctv1 28a modif,0
+ctv1 2a modif,0
+ctv2,0
+ctv_46,0
+ctv_56,0
+ctv_70,0
+ctv_boost,0
+ctv_loge_recid,0
+ctv_n,0
+ctv_n7,0
+ctv_n_7,0
+ctv_n_boost,0
+ctv_n_pos_5,0
+ctv_n_pos_marge,0
+ctv_n_whole,0
+ctv_vx,0
+ctvn,0
+ctvn+0.7,0
+ctvn1,0
+ctvp,0
+ctvssloge,0
+cuore,0
+cup Lt prosthesis,0
+cvtn,0
+darmen,0
+dens 1,0
+density_override,0
+densità,0
+dfhdhdf,0
+dig,0
+dig + 0.5,0
+dig +0.4,0
+dig - 3mm,0
+dig -ptv1m,0
+dig+0.3,0
+dig-PTV,0
+dig-bid,0
+dig-ptv,0
+dig-ptv1m,0
+dig-ptv51m,0
+dig-ptvm,0
+dig-ptvm_opt,0
+dig-sig,0
+digestif,0
+digestif-ptv1m,0
+dose,0
+dose 70,0
+dummy,0
+dummy pros,0
+ernia ing sx,0
+ernia1,0
+esofago,0
+evit1,0
+evit2,0
+ext,0
+ext-ptv1m,0
+ext-ptv1m1,0
+ext-ptv46m,0
+ext-ptv50m,0
+ext-ptv51m,0
+ext-ptv54m,0
+ext-ptv_ok,0
+ext-ptvm,0
+externe,0
+fHL,0
+fem ds,0
+fem dx,0
+fem sx,0
+femoral head-L,0
+femoral_head_left,0
+femoral_head_right,0
+femoral_prothese_left,0
+femoral_prothese_right,0
+femore  sx,0
+femore destro,0
+femore ds,0
+femore dx,0
+femore sin,0
+femore sinistr,0
+femore sinistra,0
+femore sinistro,0
+femore sn,0
+femore sx,0
+femoreDS,0
+femoreSN,0
+femoresx,0
+femori ds,0
+femori sn,0
+fempre dx,0
+femur re.,0
+femurD,0
+femurI,0
+femur_lt,0
+femur_rt,0
+femurkopf li,0
+fghhdgh,0
+fiducials,0
+gaatjes,0
+ganglio,0
+ganglios,0
+gg,0
+gh ant,0
+gh post,0
+ghost,0
+ghost 2,0
+ghost ant,0
+ghost post,0
+ghost1,0
+ghost3,0
+ghost_hot,0
+gl,0
+grad,0
+greffon,0
+grele,0
+grelle,0
+gtv,0
+gtv 1,0
+gtv 56,0
+gtv_70,0
+gtv_irm,0
+gtv_n,0
+gtv_n1,0
+gtv_n2,0
+gtv_n3,0
+gtv_n4,0
+gtv_n7,0
+gtv_n_5_mm,0
+gtv_t_recidive,0
+gtvboost,0
+gtvn,0
+haco,0
+haco_2,0
+haco_3,0
+haco_3_dosana_40.00_50.00,0
+haco_dosana_25.00_35.00,0
+haco_dosana_35.00_60.00,0
+haco_dosana_36.00_60.00,0
+haco_dosana_37.00_60.00,0
+haco_dosana_40.00_50.00,0
+haco_dosana_40.00_55.00,0
+haco_dosana_40.00_60.00,0
+haco_dosana_40.00_70.00,0
+haco_dosana_45.00_60.00,0
+help,0
+high_dose,0
+high_dose_1.5,0
+highdose,0
+highdose1.0,0
+highdose2.0,0
+hip prosthesis,0
+hot,0
+hot spot pelvi,0
+hot2,0
+hotspot,0
+hulp,0
+i,0
+iMRT_Rind1,0
+iMRT_Rind_2cm,0
+iMRT_Rind_3cm,0
+iliaca_communis,0
+iliaca_externa,0
+iliaca_interna,0
+in cav,0
+in retto,0
+in vescica,0
+instelp,0
+instelp2,0
+instelpnt,0
+instelpunt,0
+int,0
+intestin,0
+intestino,0
+intestino IN,0
+intestino tc 3,0
+intestino tc1,0
+intestino tc2,0
+intestino-PTV,0
+intestino1,0
+intestinotac1,0
+involved rectum,0
+iso,0
+iso 1,0
+iso 2,0
+iso-tatoo,0
+iso-ttt,0
+isoCT,0
+isoFASE1,0
+isoFase1,0
+isoRTxfase1,0
+isocana,0
+isocana_old,0
+isocentre,0
+isovol,0
+isovol_CT-sim,0
+isovol_NEW,0
+isovol_new,0
+isovol_old,0
+isovol_simulatie,0
+kidney_left,0
+kidney_right,0
+large bowel,0
+lb opt,0
+leaf fit,0
+lecho,0
+lecho prostati,0
+lecho qx,0
+left prosthetic hip,0
+li. Samenblase,0
+linfocele,0
+liver,0
+loge,0
+loge-ptv,0
+loge1,0
+loge_66,0
+loge_or,0
+loge_prostate,0
+loge_prostatique,0
+loops crop 0.5,0
+low,0
+lymph nodes,0
+lymphocele,0
+mARK-UP PTVB,0
+mam sx,0
+mamm sx,0
+mammella dx,0
+mammella sin,0
+marker 1,0
+marker 2,0
+marker 3,0
+marker 4,0
+mdc,0
+midollo,0
+minictv_vx,0
+moelle,0
+moelle+10,0
+moelle+7,0
+moelle10,0
+n,0
+n_5mm,0
+n_mesorectum,0
+n_petit,0
+ndoute,0
+neo_urethra,0
+new rind,0
+newprostate only,0
+no,0
+no40,0
+no4500,0
+no50,0
+nodal CTV,0
+nodes,0
+nodes 2,0
+nodes nd,0
+nodes original,0
+nodes2,0
+nv,0
+nv ov vessie,0
+nv ptv haut,0
+nv ptv1seul,0
+nv ptv2opt,0
+obturator,0
+old,0
+old CTVN,0
+opt boost ptvb,0
+opt bowel a,0
+opt ptvn bst,0
+opt_B in ptva,0
+optim_rectum,0
+optim_urethra,0
+origin,0
+origoverlap59.2,0
+ov dig,0
+ov rect,0
+ov rect bid,0
+ov rectum,0
+ov rectum ptv2,0
+ov vess,0
+ov vessie,0
+ov-dig,0
+ov-rct,0
+ov-rectum,0
+ov-vessie,0
+over dig,0
+over rect,0
+over rectum,0
+over v,0
+over ves,0
+over vess,0
+over vess(ptv70),0
+over vessie,0
+over vessptv2,0
+overlap rectum,0
+overlap vessie,0
+overlap-rectum,0
+overlap-vessie,0
+overlap_vessie,0
+overlaprectum2,0
+p+v,0
+para_aortisch,0
+pareteVescica,0
+paroi rectale,0
+paroi vesicale,0
+patient,0
+pelvi,0
+pelvi+,0
+penile bulb,0
+penile_bulb,0
+play,0
+polm dx,0
+polm sx,0
+pontage,0
+post red,0
+post_In_Vivo_PT,0
+presacral,0
+presacral + node,0
+primary_tumor,0
+pros-dil,0
+pros_vs_marges,0
+prost fr18,0
+prost+sv,0
+prostaat,0
+prostata,0
+prostata Crop,0
+prostate,0
+prostate +semina,0
+prostate 74gy,0
+prostate adpt,0
+prostate bed,0
+prostate bed CD,0
+prostate origina,0
+prostate1,0
+prostate_1,0
+prostate_or,0
+prostbed cd 70.2,0
+prot,0
+prot ant,0
+prot ant red,0
+prot ant2,0
+prot antbis,0
+prot med,0
+prot mediane,0
+prot post,0
+prot post 2,0
+prot post bis,0
+prot post red,0
+prot red 2,0
+prot red1,0
+prot-n,0
+prot-n-2,0
+prot_ant,0
+prot_ant1,0
+prot_ant_ok,0
+prot_dig1,0
+prot_dig2,0
+prot_dig3,0
+prot_post,0
+prot_post1,0
+prot_post_ok,0
+prota2,0
+protec,0
+protec 2,0
+protec ant,0
+protec dig,0
+protec med,0
+protec mediane,0
+protec oge,0
+protec post,0
+protec-ant,0
+protec-post,0
+protec2,0
+protec_ant,0
+protec_ant1,0
+protec_post,0
+protec_post1,0
+protect ant,0
+protect post,0
+protect-post,0
+protect_ant,0
+protection,0
+protection ant,0
+protection post,0
+protesi in,0
+protesi out,0
+protez,0
+protezione,0
+prothese,0
+prothese_right,0
+prothese_segmentation,0
+protp2,0
+prov,0
+prv cauda,0
+prv protesi,0
+prv_reindt,0
+prv_reingch,0
+pth dt+3cm,0
+pth dte,0
+pth gch +3cm,0
+pth gche,0
+ptv,0
+ptv 2 opt,0
+ptv 46,0
+ptv 56,0
+ptv VS,0
+ptv boost,0
+ptv cold,0
+ptv ctv,0
+ptv ctv n,0
+ptv ctv vs,0
+ptv haut,0
+ptv haut-ptv3m,0
+ptv ht optim,0
+ptv ht-ptvn,0
+ptv n,0
+ptv opt,0
+ptv vx,0
+ptv-rect,0
+ptv1,0
+ptv1 m,0
+ptv1 optim,0
+ptv1+ptv56,0
+ptv1-2,0
+ptv1-nvptv2optm,0
+ptv1-ptv2,0
+ptv1-ptv2 opt m,0
+ptv1-ptv2+ptv3m,0
+ptv1-ptv2-ptv56,0
+ptv1-ptv2m,0
+ptv1-ptv2m-dig,0
+ptv1-ptv2m-ptv3m,0
+ptv1-ptv2m1,0
+ptv1-ptv2m_opt,0
+ptv1-ptv2opt-dig,0
+ptv1-ptvb,0
+ptv1et rect,0
+ptv1lim,0
+ptv1m,0
+ptv1ptv2m,0
+ptv1sup,0
+ptv1trans,0
+ptv2,0
+ptv2 +2cm,0
+ptv2 loge,0
+ptv2 opt,0
+ptv2 opt-dig,0
+ptv2-ptv3m,0
+ptv2-rct,0
+ptv2-rect,0
+ptv2-rect m,0
+ptv2-rect-vess,0
+ptv2-rectm,0
+ptv2-rectum,0
+ptv2-rectum m,0
+ptv2_lim,0
+ptv2m,0
+ptv2opt,0
+ptv3,0
+ptv3 gg,0
+ptv3-ptv2m,0
+ptv3m,0
+ptv3sup,0
+ptv3trans,0
+ptv46-ptv1m,0
+ptv46-ptv56m,0
+ptv46m,0
+ptv50-ptv60m,0
+ptv51-ptv66m,0
+ptv51m,0
+ptv54,0
+ptv54 seul,0
+ptv54-ptv66m,0
+ptv54m,0
+ptv54op-ptv66opm,0
+ptv54opt,0
+ptv54optm,0
+ptv56-ptv66m,0
+ptv56-ptvn,0
+ptv56m,0
+ptv60-ptv66m,0
+ptv60-ptv74m,0
+ptv66,0
+ptv66-ptv70m,0
+ptv66m,0
+ptv66opt,0
+ptv70,0
+ptv70m,0
+ptvA aam,0
+ptvF1,0
+ptvF2,0
+ptvGTVexp,0
+ptvNexp,0
+ptvVSexp,0
+ptv_1,0
+ptv_2,0
+ptv_3,0
+ptv_48,0
+ptv_56,0
+ptv_66,0
+ptv_basso,0
+ptva,0
+ptvb,0
+ptvb&rect,0
+ptvbedopt,0
+ptvgg-ptv1m,0
+ptvm,0
+ptvn,0
+ptvn63,0
+push,0
+push away,0
+push here more,0
+push here now,0
+r.lleno,0
+r.vacio,0
+raccolta - ptv,0
+raccolta dx,0
+rct m,0
+rct-bid,0
+rct-ptv,0
+rct-ptv1m,0
+rct-ptvm,0
+re. Samenblase,0
+rec in new,0
+rec marg in,0
+recidiva,0
+recin,0
+recmarg,0
+recout,0
+rect bis,0
+rect ds ptv1,0
+rect irr,0
+rect m,0
+rect op,0
+rect wall,0
+rect-ptv,0
+rect-ptv1m,0
+rect-ptv51m,0
+rect-ptvm,0
+rectal wall,0
+rectm,0
+recto,0
+recto 1,0
+recto tc 1,0
+recto tc 2,0
+recto vacio,0
+rectum,0
+rectum avoid,0
+rectum avoid1,0
+rectum avoid2,0
+rectum ch,0
+rectum check,0
+rectum def,0
+rectum in PTV,0
+rectum in ptva,0
+rectum long,0
+rectum m,0
+rectum mod,0
+rectum niet PTV,0
+rectum opt,0
+rectum optim,0
+rectum optim-ptv,0
+rectum rectif,0
+rectum sup,0
+rectum-PTV,0
+rectum-PTVm,0
+rectum-ptv,0
+rectum-ptv1m,0
+rectum-ptv2,0
+rectum-ptv2m,0
+rectum-ptvm,0
+rectum1,0
+rectum1 avoid,0
+rectum2 avoid,0
+rectum_ext,0
+rectum_ext_dosana_40.00_50.00,0
+rectum_herstel,0
+rectum_int,0
+rectum_lim,0
+rectum_optim,0
+rectum_segmentation,0
+rectumext,0
+rectumext_dosana_30.00_50.00,0
+rectumint,0
+rein_Dt,0
+rein_Gch,0
+rein_dt,0
+rein_gch,0
+retto,0
+retto IN,0
+retto IN 66,0
+retto IN 67,0
+retto IN 74,0
+retto IN II,0
+retto IN P,0
+retto IN prosta,0
+retto IN57.6,0
+retto IN67,0
+retto IN67.2,0
+retto IN70,0
+retto IN74,0
+retto IN75,0
+retto IN78,0
+retto In 70,0
+retto InBoost,0
+retto PTV,0
+retto in,0
+retto in PTVGTV,0
+retto in vescic,0
+retto inLoggia,0
+retto non PTV,0
+retto non PTVGTV,0
+retto sup,0
+retto sup.,0
+retto-PTV,0
+retto-PTVtot,0
+retto-prostata,0
+rettoIN 70,0
+rettoIN66,0
+rettoIN68.8,0
+rettoIN73.5,0
+rettoIN75.2,0
+rettoIN78,0
+rettoInTOT,0
+rettoInprostata,0
+retto_out,0
+rettoint,0
+rettosup,0
+rim_0.4-1,0
+rim_0_20mm,0
+rim_0_20mm_dosana_24.00_30.00,0
+rim_0_30mm,0
+rim_0_30mm_opt,0
+rim_1-3,0
+rim_20_50mm,0
+rim_20_50mm_dosana_18.00_30.00,0
+rim_20_50mm_dosana_30.00_60.00,0
+rim_20_50mm_dosana_35.00_60.00,0
+rim_20_50mm_dosana_40.00_50.00,0
+rim_20_50mm_dosana_40.00_60.00,0
+rim_20_50mm_dosana_45.00_55.00,0
+rim_20_50mm_dosana_50.00_60.00,0
+rim_20_50mm_dosana_50.00_70.00,0
+rim_20_50mm_dosana_55.00_60.00,0
+rim_3-5,0
+rim_30_60mm,0
+rim_30_60mm_opt,0
+rim_48Gy_20_50mm,0
+rim_48Gy_20_50mm_dosana_45.00_60.00,0
+rim_48Gy_50_70mm,0
+rim_48Gy_8_20mm,0
+rim_48Gy_8_20mm_dosana_50.00_60.00,0
+rim_48Gy_8mm,0
+rim_48Gy_8mm_dosana_55.00_60.00,0
+rim_48Gy_8mm_dosana_65.00_75.00,0
+rim_5-7,0
+rim_HD_1.0,0
+rim_HD_2.0,0
+rim_PTV_0.8,0
+rim_PTV_0.8-2,0
+rim_PTV_8_20mm,0
+rim_PTV_8_20mm_dosana_75.00_80.00,0
+rim_PTV_8mm,0
+rim_PTV_GTV_Lnn_All_8_20mm,0
+rim_PTV_GTV_Lnn_All_8mm,0
+rim_PTV_GTV_Lnn_All_8mm_old,0
+rim_PTV_GTV_all_8_20mm,0
+rim_PTV_GTV_all_8mm,0
+ring,0
+ring 1 cm,0
+ring 10Gy,0
+ring 4Gy,0
+ring 54,0
+ring 54 ht,0
+ring 54ht,0
+ring 56,0
+ring 66,0
+ring 70,0
+ring 70gy,0
+ring 74,0
+ring 80,0
+ring I,0
+ring II,0
+ring LOGGIA,0
+ring PELVI,0
+ring TOT,0
+ring boost,0
+ring gg,0
+ring haut,0
+ring ht,0
+ring loge,0
+ring n,0
+ring n-la,0
+ring prostata,0
+ring ptv1 ht,0
+ring ptv1m,0
+ring ptv2,0
+ring ptvn,0
+ring-boost,0
+ring-large,0
+ring1,0
+ring1_ok,0
+ring2,0
+ring54,0
+ring56,0
+ring66,0
+ring70,0
+ring74,0
+ring80,0
+ringNO,0
+ringOK,0
+ringP,0
+ringP+V,0
+ring_boost,0
+ring_pelvi,0
+ring_prostata,0
+ring_rectum,0
+ringptv3,0
+sb opt,0
+scatter,0
+scoperto loggia,0
+scopertoPROST,0
+scopertoVESCICOLE,0
+scoperto_pelvi,0
+seeds,0
+seeds + 3mm,0
+seeds + art,0
+seeds+0.3mm,0
+seeds+3mm,0
+segmentation,0
+seminal vesicle,0
+seminal vesicles,0
+sig-ptv1m,0
+sigm,0
+sigma,0
+sigma 2,0
+sigma IN 54,0
+sigma IN54,0
+sigma-PTV,0
+sigmaIN54.4,0
+sigmaIN68.8,0
+sigma_att,0
+sigma_exp,0
+sigmacolon,0
+sigmo,0
+sigmoid,0
+sigmoide,0
+sigmoide-ptv1m,0
+sinfisi,0
+skin,0
+skin_caudaal,0
+skin_caudaal_links,0
+skin_caudaal_rechts,0
+skin_craniaal,0
+small bowel,0
+small_intestine,0
+sommaPTV,0
+sphincter,0
+spinal_cord,0
+ss dos,0
+struct,0
+structure01,0
+sup,0
+sur dos,0
+sur_50mm,0
+sur_50mm_dosana_10.00_30.00,0
+sur_50mm_dosana_12.00_30.00,0
+sur_50mm_dosana_25.00_60.00,0
+sur_50mm_dosana_30.00_50.00,0
+sur_50mm_dosana_30.00_60.00,0
+sur_50mm_dosana_35.00_40.00,0
+sur_50mm_dosana_35.00_60.00,0
+sur_50mm_dosana_35.00_70.00,0
+sur_50mm_dosana_38.00_50.00,0
+sur_50mm_dosana_40.00_50.00,0
+sur_50mm_dosana_40.00_60.00,0
+sur_50mm_dosana_40.00_80.00,0
+sur_50mm_dosana_41.00_60.00,0
+sur_60mm,0
+sur_70mm,0
+surd,0
+surdo,0
+surdos56,0
+surdos70,0
+surr,0
+symphyse,0
+t_recidive,0
+targetF2,0
+targets,0
+temp,0
+tenue,0
+tenue-PTV,0
+tenue_exp,0
+tep_n_susp,0
+test,0
+test PTVN,0
+test_CTV-PF 70.2,0
+test_CTV_nodes,0
+test_Prostate,0
+testa femore dx,0
+testicolo,0
+tete femorale dr,0
+tete femorale ga,0
+tf DTE,0
+tf GCHE,0
+tfd,0
+tfd1,0
+tfdt,0
+tfg,0
+tfg1,0
+tiroide,0
+transplantnier,0
+uretere destro,0
+urethra,0
+urethra_dosana_69.00_70.00,0
+urethra_new,0
+urethra_old,0
+urethral_bulb,0
+uretraIN,0
+v,0
+v.llena,0
+vaisseaux,0
+vasc vet,0
+vasi,0
+vejiga,0
+vejigallena,0
+ves m,0
+ves-ptv1m,0
+vescica,0
+vescica OUT,0
+vescica OUT 66,0
+vescica OUT 78,0
+vescica OUT I,0
+vescica OUT II,0
+vescica OUT70,0
+vescica OUT74,0
+vescica nel PTV,0
+vescica out,0
+vescica senzaPTV,0
+vescica-PTV,0
+vescica-PTVG,0
+vescica-PTVtot,0
+vescica-prostata,0
+vescicaIN66,0
+vescicaIN68.8,0
+vescicaIN78,0
+vescicaINprosta,0
+vescicaINtot,0
+vescicaOUT,0
+vescica_exp,0
+vess irr,0
+vess m,0
+vess-ptv,0
+vess-ptv1m,0
+vess-ptv51m,0
+vessel,0
+vessels,0
+vessels nd,0
+vessels original,0
+vessie,0
+vessie -ptv1m,0
+vessie irra,0
+vessie m,0
+vessie-PTV,0
+vessie-PTVm,0
+vessie-ptv,0
+vessie-ptv1m,0
+vessie-ptv2m,0
+vessie-ptvm,0
+vessie1,0
+vessie60,0
+vessieirra-ptvm,0
+vessiem,0
+vessm,0
+vol,0
+vol +,0
+vol -,0
+vol 51.3,0
+vol+,0
+vol-,0
+vol1,0
+vol2,0
+vol61.2,0
+vs,0
+vsd,0
+vsi,0
+vsx,0
+vx,0
+vx7mm,0
+vx_7_mm,0
+vx_7mm,0
+vx_iliaques,0
+xghg,0
+y_PTV45,0
+y_RECT,0
+z PTV1-PTV2,0
+z PTV2-rect,0
+z paroi rectum,0
+z paroie vessie,0
+z rectum post,0
+z vessiepartiell,0
+z_BO,0
+zone_caudaal,0
+zone_caudaal_links,0
+zone_caudaal_rechts,0
+zone_craniaal,0
+zrim_PTV_8mm,0
+zrim_PTV_GTV_Lnn_All_8mm,0
+zrim_PTV_GTV_Lnn_All_8mm_old,0
