@@ -17,6 +17,9 @@ pathlib = "*"
 xlrd = "*"
 pyarrow = "*"
 ipywidgets = "*"
+rapidfuzz = "*"
+polyfuzz = "*"
+flair = "*"
 
 [dev-packages]
 ipykernel = "*"

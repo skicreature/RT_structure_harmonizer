@@ -1,11 +1,11 @@
 import tkinter as tk
-from tkinter import ttk
+from tkinter import ttk, simpledialog
 import pandas as pd
 
 
 class HarmonizerGUI:
-    def __init__(self, harmonizer):
-        self.harmonizer = harmonizer
+    def __init__(self, harmonized_df):
+        self.harmonized_df = harmonized_df
         self.root = tk.Tk()
         self.root.title("Harmonizer")
 
@@ -14,9 +14,7 @@ class HarmonizerGUI:
         self.label.grid(column=0, row=0)
 
         # Create a Combobox for input
-        self.input_text = ttk.Combobox(
-            self.root, values=harmonizer.harmonized_df.columns.tolist()
-        )
+        self.input_text = ttk.Combobox(self.root, values=harmonized_df.columns.tolist())
         self.input_text.grid(column=1, row=0)
 
         # Create a Spinbox to select the number of results
@@ -35,14 +33,24 @@ class HarmonizerGUI:
         # Get the input value
         search_column = self.input_text.get()
         # Check if the input value is a column in the DataFrame
-        if search_column in self.harmonizer.harmonized_df.columns:
+        if search_column in self.harmonized_df.columns:
             # Get the top n rows ordered by score
-            top_rows = self.harmonizer.harmonized_df[[search_column]].nlargest(
+            top_rows = self.harmonized_df[[search_column]].nlargest(
                 int(self.num_results.get()), search_column
             )
             # Convert the DataFrame to a string and set it as the value of the output widget
             self.output.delete(1.0, tk.END)
             self.output.insert(tk.END, top_rows.to_string())
+
+    def get_user_input(self, prompt: str) -> str:
+        # Create a simple dialog that asks the user for input and returns it
+        user_input = simpledialog.askstring("Input", prompt, parent=self.root)
+        return user_input
+
+    def display_message(self, message: str):
+        # Insert the message at the end of the Text widget and scroll to the end
+        self.output.insert(tk.END, message + "\n")
+        self.output.see(tk.END)
 
     def run(self):
         self.root.mainloop()

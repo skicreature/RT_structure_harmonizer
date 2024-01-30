@@ -7,14 +7,23 @@ import pathlib
 from functools import partial
 from multiprocessing import Pool
 from typing import Any, TypeVar, Type, Optional, List, Dict, Union, cast  # noqa
-import collections.abc
 
+import tkinter as tk
+from tkinter import ttk, simpledialog
+import pandas as pd
 import numpy as np
 import pandas as pd
-from fuzzywuzzy import fuzz
+from rapidfuzz import fuzz  # consider importing process to use to speed things up
 from openpyxl import load_workbook  # noqa
 from progress.bar import Bar
 from pydicom import dcmread
+
+from polyfuzz.models import Embeddings
+from flair.embeddings import TransformerWordEmbeddings
+
+from polyfuzz import PolyFuzz
+
+# consider implementing polyfuzz, an alternative to fuzzywuzzy that is faster and more accurate and can use transformer based models.
 
 
 ################################################################################
@@ -40,7 +49,7 @@ class BaseDict(dict):
         self.item_class = item_class
         super().__init__(*args, **kwargs)
 
-    def add(self, item: T):
+    def add(self, item: T):  # type: ignore
         if not isinstance(item, self.item_class):
             raise TypeError(
                 f"Expected instance of {self.item_class.__name__}, got {type(item).__name__}"
@@ -48,10 +57,10 @@ class BaseDict(dict):
         if item.name not in self:
             self[item.name] = item
 
-    def get(self, name: str) -> Optional[T]:
+    def get(self, name: str) -> Optional[T]:  # type: ignore
         return cast(Optional[T], self.get(name))
 
-    def __getitem__(self, name: str) -> Optional[T]:
+    def __getitem__(self, name: str) -> Optional[T]:  # type: ignore
         return cast(Optional[T], super().__getitem__(name)) if name in self else None
 
     def to_dict_list(self) -> List[Dict[str, Union[str, list[str]]]]:
@@ -103,7 +112,7 @@ class TG_263_name(BaseRTItem):
 
     def add_synonym(self, synonym: str):
         if synonym in TG_263_name.all_synonyms:
-            raise ValueError(f"Synonym '{synonym}' is already used")
+            return  # Skip adding the synonym if it already exists
         TG_263_name.all_synonyms.add(synonym)
         self.synonyms.append(synonym)
 
@@ -241,7 +250,7 @@ class StructureHarmonizer:
     ):
         self.directory = directory
         self.RTSTRUCT_pattern = "RQ*_RTSTRUCT*.DCM"  # set the regex pattern to match
-        self.harmonized_csv_path = output_filename + ".csv"
+        self.harmonized_csv_path = output_filename
         self.roi_dict = {}
         self.closest_matches = {}  # utilized in review_matches
         self.roi_json_path = roi_json_path
@@ -329,12 +338,14 @@ class StructureHarmonizer:
                 if fnmatch.fnmatch(file, self.RTSTRUCT_pattern):
                     yield root, _, [file]
 
-    def load_harmonized_df(self):
+    def load_harmonized_df(self, harmonized_csv_path: Optional[str] = None):
         """
         Loads the stored harmonization dictionary from a previous output CSV
         file.
         """
-        self.harmonized_df = pd.read_csv(self.harmonized_csv_path, index_col=0)
+        if not harmonized_csv_path:
+            harmonized_csv_path = self.harmonized_csv_path
+        self.harmonized_df = pd.read_csv(harmonized_csv_path, index_col=0)
         # Identify user-defined names
         self.user_defined_standard_names = [
             col for col in self.harmonized_df.columns if col.startswith("USER_")
@@ -539,13 +550,15 @@ class StructureHarmonizer:
         It is possible that a faster better matching score could be obtained. If
         so, this method should be updated.
         """
-        roi_lower = row.name.lower().strip()
+        roi_lower = row.name.strip()
         max_scores = {}
         for key, val in self.TG263_data_dict.items():
             max_score = 0
             for TG263name in val.synonyms:
-                TG263name_lower = TG263name.lower().strip()
-                score = fuzz.ratio(TG263name_lower, roi_lower)
+                TG263name_lower = TG263name.strip()
+                score = fuzz.ratio(
+                    TG263name_lower, roi_lower
+                )  # replace with function placeholder
                 if score > max_score:
                     max_score = score
             max_scores[key] = max_score
@@ -562,10 +575,55 @@ class StructureHarmonizer:
             **self.harmonized_df.apply(self.calculate_match_score, axis=1)
         )
 
-    def get_closest_matches(self):
-        """
-        using the harmonized_df, find the closest matches for each roi name
-        """
+    ############################################################################
+    # -------------- polyfuzz implementation ----------------
+    def calculate_match_score_polyfuzz(self):
+        # Create a list of all ROI names and a list of all TG263 names
+        roi_names = list(self.roi_dict.keys())
+        tg263_names = [
+            synonym for val in self.TG263_data_dict.values() for synonym in val.synonyms
+        ]
+
+        # Create a PolyFuzz instance and match the lists
+        model = PolyFuzz("TF-IDF")
+        model.match(roi_names, tg263_names)
+
+        # Get the matches
+        matches = model.get_matches()
+
+        # Convert the matches DataFrame to a dictionary
+        match_dict = matches.set_index("From").T.to_dict("list")
+
+        # Convert the dictionary to a pandas Series
+        match_series = pd.Series(match_dict)
+
+        return match_series
+
+    def calculate_match_score_polyfuzz_transformers(self):
+        # Create a list of all ROI names and a list of all TG263 names
+        roi_names = list(self.roi_dict.keys())
+        tg263_names = [
+            synonym for val in self.TG263_data_dict.values() for synonym in val.synonyms
+        ]
+
+        # Create a TransformerWordEmbeddings instance
+        embeddings = TransformerWordEmbeddings("bert-base-multilingual-cased")
+
+        # Create an Embeddings instance and match the lists
+        bert = Embeddings(embeddings, min_similarity=0, model_id="BERT")
+        model = PolyFuzz(bert)
+        model.match(roi_names, tg263_names)
+
+        # Get the matches
+        matches = model.get_matches()
+
+        # Convert the matches DataFrame to a dictionary
+        match_dict = matches.set_index("From").T.to_dict("list")
+
+        # Convert the dictionary to a pandas Series
+        match_series = pd.Series(match_dict)
+
+        return match_series
 
     # ---------------------------- Review --------------------------------------
     def review_matches(self):
@@ -634,6 +692,212 @@ class StructureHarmonizer:
                     self.harmonized_df.loc[roi, "USER_" + custom_name] = 1
                     print(f"Added custom match name '{custom_name}' for {roi}.")
                     break  # Move on to the next ROI
+
+    def prioritize_rt_structures(self):
+        """
+        Prioritize RT structures for the match process.
+        This function returns a sorted list of RT structures, with the most
+        important structures first.
+        """
+        # Define regex patterns for target structures and optimization structures
+        target_pattern = re.compile(r"(GTV|CTV|PTV)", re.IGNORECASE)
+        optimization_pattern = re.compile(
+            r"\bopt(?=[A-Z])|\b(?<=[A-Z])opt\b", re.IGNORECASE
+        )
+
+        # Define a list of high priority TG_263_names
+        high_priority_names = [
+            "Prostate",
+            "Bladder",
+            "Rectum",
+            "Femur_Head_L",
+            "Femur_Head_R",
+            "Bowel",
+            "PenileBulb",
+            "SeminalVes",
+            "Urethra",
+        ]  # Needs to be actual TG_263 names, could replace this to use selected TG_263_data_dict items
+
+        # Initialize an empty list to store the high priority ROIs
+        high_priority_rois = []
+
+        # Iterate over the ROIs in the DataFrame
+        for roi in self.harmonized_df.index:
+            # Skip ROIs that already have a match
+            if self.harmonized_df_matches.transpose()[[roi]].any().any() == 1:
+                continue
+
+            # Check if the ROI is a target structure and not an optimization structure
+            if target_pattern.search(roi) and not optimization_pattern.search(roi):
+                high_priority_rois.append(roi)
+
+        for name in high_priority_names:
+            top_rows = self.harmonized_df[[name]].nlargest(10, name).index
+            for roi in top_rows:
+                # Skip ROIs that already have a match
+                if self.harmonized_df_matches.transpose()[[roi]].any().any() == 1:
+                    continue
+                high_priority_rois.append(roi)
+
+        # Sort the high priority ROIs by the number of words and the length of the words
+        high_priority_rois = sorted(
+            high_priority_rois, key=lambda roi: (len(roi.split("_")), len(roi))
+        )
+
+        return high_priority_rois
+
+    def review_matches_gui(self):
+        """
+        Allows the user to review and confirm the matches for each ROI name,
+        and add custom matches if necessary.
+        Review is ordered by score, with the highest score first.
+        """
+        gui = HarmonizerGUI(harmonizer=self)
+        gui.run()
+
+
+################################################################################
+# -------------------------- GUI Classes ---------------------------------------
+class HarmonizerGUI:
+    def __init__(self, harmonizer: StructureHarmonizer):
+        self.harmonizer = harmonizer
+        self.harmonizer.harmonized_df = self.harmonizer.harmonized_df.transpose()
+        self.root = tk.Tk()
+        self.root.title("Harmonizer")
+
+        # Create a Label
+        self.label = ttk.Label(self.root, text="Please enter a column name:")
+        self.label.grid(column=0, row=0)
+
+        # Create a Combobox for input
+        self.input_text = ttk.Combobox(
+            self.root, values=self.harmonizer.harmonized_df.columns.tolist()
+        )
+        self.input_text.grid(column=1, row=0)
+
+        # Create a Spinbox to select the number of results
+        self.num_results = ttk.Spinbox(self.root, from_=1, to=100)
+        self.num_results.grid(column=2, row=0)
+
+        # Create a Text widget to display the results
+        self.output = tk.Text(self.root)
+        self.output.grid(column=0, row=1, columnspan=3)
+        self.num_results = ttk.Spinbox(self.root, from_=1, to=100)
+        self.num_results.grid(column=2, row=0)
+        self.num_results.delete(0, "end")
+        self.num_results.insert(0, "10")  # Set a default value of 10
+
+        # Bind the Combobox and Spinbox to the on_value_change function
+        self.input_text.bind("<<ComboboxSelected>>", self.on_value_change)
+        self.num_results.bind("<Return>", self.on_value_change)
+
+        # Create a Text widget to display the top matches
+        self.output.tag_config("highlight", background="yellow")
+        self.output.bind("<Button-1>", self.on_text_click)
+
+    def get_top_rows(self, roi):
+        self.top_rows = self.harmonizer.harmonized_df[[roi]].nlargest(
+            int(self.num_results.get()), roi
+        )
+
+    def on_value_change(self, event):
+        # Get the input value
+        search_column = self.input_text.get()
+        # Check if the input value is a column in the DataFrame
+        if search_column in self.harmonizer.harmonized_df.columns:
+            # Get the top n rows ordered by score
+            self.get_top_rows(search_column)
+            # Convert the DataFrame to a string and set it as the value of the output widget
+            top_scores_str = self.top_rows.to_string()
+            # Use the display_matches method to display the top rows
+            self.display_matches(top_scores_str)
+
+    def on_text_click(self, event):
+        """
+        Handle a mouse button click event on the Text widget.
+        """
+        # Remove the highlight from all lines
+        self.output.tag_remove("highlight", "1.0", tk.END)
+
+        # Get the current line of text under the mouse cursor
+        current_line = self.output.get("insert linestart", "insert lineend")
+
+        # Store the selected match
+        self.selected_match = current_line.strip()
+
+        # Highlight the selected match
+        self.output.tag_add("highlight", "insert linestart", "insert lineend")
+
+    def get_user_selection(self):
+        """
+        Get the user's selection from the Text widget.
+        """
+        # Return the selected match
+        return self.selected_match
+
+    def get_user_input(self, prompt: str) -> str | None:
+        # Create a simple dialog that asks the user for input and returns it
+        user_input = simpledialog.askstring("Input", prompt, parent=self.root)
+        return user_input
+
+    def display_message(self, message: str):
+        # Insert the message at the end of the Text widget and scroll to the end
+        self.output.insert(tk.END, message + "\n")
+        self.output.see(tk.END)
+
+    def display_matches(self, matches_str):
+        """
+        Display the given matches in the GUI.
+        """
+        # Set the string as the value of the output widget
+        self.output.delete(1.0, tk.END)
+        self.output.insert(tk.END, matches_str)
+
+    def wait_for_user_input(self):
+        """
+        Wait for the user to select a match.
+        """
+        # Create a simple dialog that asks the user for input and returns it
+        user_input = simpledialog.askstring(
+            "Input", "Please select a match", parent=self.root
+        )
+        return user_input
+
+    def update_dataframe(self, item, match):
+        """
+        Update the DataFrame based on the given match.
+        """
+        # Update the DataFrame
+        self.harmonizer.harmonized_df_matches.loc[match, item] = 1
+        #  note the reversal of match, item from item, match. This is necessary
+        # to account for the transpose of the harmonized_df in the init of the GUI
+
+    def review_matches(self):
+        user_responses = {}
+        self.harmonizer.user_defined_standard_names = []
+        priority_rois = self.harmonizer.prioritize_rt_structures()
+
+        for roi in self.harmonizer.harmonized_df.index:
+            if self.harmonizer.harmonized_df.loc[roi].any() == 1:
+                continue
+            # Get the top N scored items for the current ROI from the GUI
+            self.input_text.set(roi)
+            self.on_value_change(None)
+            top_scores_str = self.output.get(1.0, tk.END)
+            # Display the top matches in the GUI
+            self.display_matches(top_scores_str)
+            # Wait for the user to select the best match
+            self.wait_for_user_input()
+            # Update the DataFrame based on the user's selection
+            selected_match = self.get_user_selection()
+            self.update_dataframe(roi, selected_match)
+
+    def run(self):
+        self.root.mainloop()
+
+    def run_review(self):
+        self.review_matches()
+        self.root.mainloop()
 
     ############################################################################
 
